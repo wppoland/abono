@@ -91,8 +91,8 @@ msgid "No"
 msgstr "Nie"
 
 #: src/Admin/Settings.php:50
-msgid "Subscribe — Newsletter Opt-In"
-msgstr "Subscribe — Zapis do newslettera"
+msgid "Subscribe: Newsletter Opt-In"
+msgstr "Subscribe: Zapis do newslettera"
 
 #: src/Admin/Settings.php:51
 msgid "Subscribe"
@@ -136,7 +136,7 @@ msgstr "Wyświetlaj klientom zapis do newslettera."
 #: src/Admin/Settings.php:124
 msgid ""
 "The master switch. When off, nothing renders anywhere and no new subscribers "
-"are collected — existing records stay intact."
+"are collected, existing records stay intact."
 msgstr ""
 
 #: src/Admin/Settings.php:130
@@ -150,7 +150,7 @@ msgstr "Dodaj pole wyboru zapisu przy składaniu zamówienia."
 #: src/Admin/Settings.php:140
 msgid ""
 "Places the checkbox in the order form so customers can subscribe as they buy "
-"— the highest-intent moment. The source is recorded as “checkout”. Turn off "
+", the highest-intent moment. The source is recorded as “checkout”. Turn off "
 "to keep the opt-in for other placements only."
 msgstr ""
 
@@ -169,12 +169,12 @@ msgstr "Etykieta pola wyboru"
 #: src/Admin/Settings.php:168
 msgid ""
 "The consent text shown next to the checkbox. State plainly what the customer "
-"agrees to receive — vague wording weakens GDPR consent. Leave blank to use "
+"agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
 "the default below."
 msgstr ""
 
 #: src/Admin/Settings.php:176
-msgid "Live preview — how the opt-in row looks at checkout."
+msgid "Live preview, how the opt-in row looks at checkout."
 msgstr ""
 
 #: src/Admin/Settings.php:182
