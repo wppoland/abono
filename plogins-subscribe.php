@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Plogins Subscribe for WooCommerce
+ * Plugin Name:       Plogins Subscribe - Newsletter Signup for WooCommerce
  * Plugin URI:        https://plogins.com/plogins-subscribe/
  * Description:        Add a newsletter opt-in at checkout and collect subscribers with consent.
  * Version:           0.1.3
