@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 0.1.3
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,9 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 Subscribe connects to no external services. The opt-in checkbox, the consent records and the CSV export all run on your own site, and no email addresses or order data are sent anywhere off it. Each subscriber is stored in your WordPress database as a private "subscribe_subscriber" custom post type record holding the email, consent flag, source and signup timestamp; its settings live in the "subscribe_settings" option. The plugin does not send email and is not tied to Mailchimp or any other mailing platform, so what you do with the exported list is entirely up to you.
 
 == Changelog ==
+
+= 1.0.1 =
+* First stable release.
 
 = 0.1.3 =
 * Renamed to Plogins Subscribe for WooCommerce for a more distinctive plugin name.
