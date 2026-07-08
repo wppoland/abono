@@ -1,0 +1,73 @@
+# wp.org Stable Readme translation (es_ES)
+msgid ""
+msgstr ""
+"Project-Id-Version: subscribe Stable Readme\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: plogins-i18n\n"
+
+msgid "Requires Plugins: woocommerce"
+msgstr "Requiere complementos: woocommerce"
+
+msgid "Adds a newsletter opt-in checkbox to the WooCommerce checkout and records each subscriber's email, consent and signup date."
+msgstr "Añade una casilla de verificación de suscripción al boletín al proceso de pago de WooCommerce y registra el correo electrónico, el consentimiento y la fecha de registro de cada suscriptor."
+
+msgid "Subscribe puts a newsletter opt-in checkbox on your WooCommerce checkout. When a\ncustomer ticks it and places the order, their email is saved on your own site\nalong with the consent flag, where the opt-in came from, and the date. You review\nthe list under WooCommerce and export it whenever you need it."
+msgstr "Suscribirse coloca una casilla de verificación de suscripción al boletín informativo en su pago de WooCommerce. cuando un\nel cliente lo marca y realiza el pedido, su correo electrónico se guarda en tu propio sitio\njunto con el indicador de consentimiento, el origen de la suscripción y la fecha. tu revisas\nla lista en WooCommerce y expórtela cuando la necesite."
+
+msgid "The checkbox is unticked by default, which is what most GDPR setups need: the\ncustomer has to make an active choice to opt in. You can edit the label text, and\nnothing is ever sent to an outside service, so the email addresses stay in your\ndatabase and nowhere else."
+msgstr "La casilla de verificación está desmarcada de forma predeterminada, que es lo que necesitan la mayoría de las configuraciones de GDPR: el\nEl cliente debe tomar una decisión activa para participar. Puede editar el texto de la etiqueta y\nnunca se envía nada a un servicio externo, por lo que las direcciones de correo electrónico permanecen en su\nbase de datos y en ningún otro lugar."
+
+msgid "The plugin is built for the source to be easy to read and fork. If you hit a bug\nor want to suggest a change, the code and issue tracker live at"
+msgstr "El complemento está diseñado para que la fuente sea fácil de leer y bifurcar. Si encuentras un error\no desea sugerir un cambio, el código y el rastreador de problemas están disponibles en"
+
+msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-subscribe/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-subscribe/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-subscribe\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-subscribe/issues"
+msgstr "* <strong>Documentación</strong> - https://plogins.com/es/plogins-subscribe/docs/\n* <strong>Página de complementos</strong> - https://plogins.com/es/plogins-subscribe/\n* <strong>Código fuente</strong> - https://github.com/wppoland/plogins-subscribe\n* <strong>Informes de errores y solicitudes de funciones</strong> - https://github.com/wppoland/plogins-subscribe/issues"
+
+msgid "* Adds a newsletter opt-in checkbox to the classic WooCommerce checkout.\n* Records the opt-in only when the customer ticks the box; it is unticked by default and the label is editable.\n* Saves each subscriber as a private custom post type record with email, consent, source and signup date.\n* Lists subscribers under WooCommerce > Subscribers in wp-admin.\n* Exports the whole list to a CSV file with one click (CSV-injection safe).\n* Skips duplicates, so the same email is never recorded twice.\n* Keeps everything in your own database. No third-party email service is involved.\n* Ships a translation template (.pot) and removes its data on uninstall.\n* Declares HPOS compatibility and works with WooCommerce 8.0 and up."
+msgstr "* Añade una casilla de verificación de suscripción al boletín al proceso de pago clásico de WooCommerce.\n* Registra la suscripción solo cuando el cliente marca la casilla; está desmarcado de forma predeterminada y la etiqueta es editable.\n* Guarda a cada suscriptor como un registro privado de tipo de publicación personalizada con correo electrónico, consentimiento, fuente y fecha de registro.\n* Enumera los suscriptores en WooCommerce > Suscriptores en wp-admin.\n* Exporta la lista completa a un archivo CSV con un solo clic (seguro para inyección CSV).\n* Omite duplicados, por lo que el mismo correo electrónico nunca se registra dos veces.\n* Mantiene todo en su propia base de datos. No interviene ningún servicio de correo electrónico de terceros.\n* Envía una plantilla de traducción (.pot) y elimina sus datos al desinstalarla.\n* Declara compatibilidad con HPOS y funciona con WooCommerce 8.0 y versiones posteriores."
+
+msgid "1. Upload the plugin to `/wp-content/plugins/subscribe`, or install it from Plugins > Add New.\n2. Activate it. WooCommerce must be installed and active first.\n3. Open WooCommerce > Subscribe to turn the opt-in on, set the checkbox label, and choose whether it starts ticked.\n4. Find the people who opted in under WooCommerce > Subscribers, and use the Export to CSV button there to download them."
+msgstr "1. Cargue el complemento en `/wp-content/plugins/subscribe`, o instálelo desde Complementos > Añadir nuevo.\n2. Actívalo. WooCommerce debe estar instalado y activo primero.\n3. Abra WooCommerce > Suscribirse para activar la suscripción, configure la etiqueta de la casilla de verificación y elija si comienza marcada.\n4. Busque las personas que optaron por registrarse en WooCommerce > Suscriptores y use el botón Exportar a CSV allí para descargarlas."
+
+msgid "Yes. WooCommerce has to be installed and active, otherwise the plugin shows a notice and does nothing."
+msgstr "Sí. WooCommerce debe estar instalado y activo; de lo contrario, el complemento muestra un aviso y no hace nada."
+
+msgid "No. It starts unticked so the customer opts in on purpose, which is what GDPR consent generally requires. There is a setting to pre-tick it if your local rules permit, but that is off out of the box."
+msgstr "No. Comienza sin marcar, por lo que el cliente se registra intencionalmente, que es lo que generalmente requiere el consentimiento del RGPD. Hay una configuración para marcarlo previamente si las reglas locales lo permiten, pero eso está fuera de lo común."
+
+msgid "In your WordPress database, as private \"Subscriber\" records under the WooCommerce menu. Each one holds the email, the consent flag, the source and the signup date. You can export the lot to CSV."
+msgstr "En tu base de datos de WordPress, como registros privados de \"Suscriptor\" en el menú de WooCommerce. Cada uno contiene el correo electrónico, la bandera de consentimiento, la fuente y la fecha de registro. Puede exportar el lote a CSV."
+
+msgid "No. There is no integration with any external email platform. The addresses stay on your site and go where you decide to take them."
+msgstr "No. No existe integración con ninguna plataforma de correo electrónico externa. Las direcciones permanecen en tu sitio y van a donde decidas llevarlas."
+
+msgid "The opt-in renders on the classic (shortcode) checkout. The plugin declares compatibility with the cart and checkout blocks so it does not trigger a warning, but the checkbox itself currently appears on the classic checkout."
+msgstr "La suscripción se muestra en el pago clásico (código abreviado). El complemento declara compatibilidad con el carrito y los bloques de pago, por lo que no genera una advertencia, pero la casilla de verificación aparece actualmente en el pago clásico."
+
+msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
+msgstr "Sí. Este complemento es compatible con WordPress Multisite. Activarlo en red o activarlo en sitios individuales; Cada sitio mantiene su propia configuración y datos."
+
+msgid "1. The newsletter opt-in checkbox on the WooCommerce checkout.\n2. The Subscribers list with the Export to CSV button."
+msgstr "1. La casilla de verificación de suscripción al boletín en el proceso de pago de WooCommerce.\n2. La lista de Suscriptores con el botón Exportar a CSV."
+
+msgid "Subscribe connects to no external services. The opt-in checkbox, the consent records and the CSV export all run on your own site, and no email addresses or order data are sent anywhere off it. Each subscriber is stored in your WordPress database as a private \"subscribe_subscriber\" custom post type record holding the email, consent flag, source and signup timestamp; its settings live in the \"subscribe_settings\" option. The plugin does not send email and is not tied to Mailchimp or any other mailing platform, so what you do with the exported list is entirely up to you."
+msgstr "Suscríbete no se conecta a ningún servicio externo. La casilla de verificación de suscripción, los registros de consentimiento y la exportación CSV se ejecutan en tu propio sitio, y no se envían direcciones de correo electrónico ni datos de pedidos a ninguna parte fuera de él. Cada suscriptor se almacena en tu base de datos de WordPress como un registro privado de tipo de publicación personalizado \"subscribe_subscriber\" que contiene el correo electrónico, el indicador de consentimiento, la fuente y la marca de tiempo de registro; tu configuración se encuentra en la opción \"subscribe_settings\". El complemento no envía correo electrónico y no está vinculado a Mailchimp ni a ninguna otra plataforma de correo, por lo que lo que haga con la lista exportada depende totalmente de ti."
+
+msgid "* First stable release."
+msgstr "* Primera versión estable."
+
+msgid "* Renamed to Plogins Subscribe for WooCommerce for a more distinctive plugin name."
+msgstr "* Renombrado a Plogins Suscríbete a WooCommerce para obtener un nombre de complemento más distintivo."
+
+msgid "* Adds `subscribe/checkout_after_optin` action for extra checkout fields (e.g. Subscribe Pro custom fields).\n* Adds `subscribe/subscriber_meta` filter for extra subscriber post meta on create.\n* Adds `subscribe/export_headers` and `subscribe/export_row` filters for CSV export extensions."
+msgstr "* Añade la acción `subscribe/checkout_after_optin` para campos de pago adicionales (por ejemplo, campos personalizados de Subscribe Pro).\n* Añade el filtro `subscribe/subscriber_meta` para meta meta de publicación de suscriptor adicional al crear.\n* Añade filtros `subscribe/export_headers` y `subscribe/export_row` para extensiones de exportación CSV."
+
+msgid "* Adds `subscribe/subscriber_consent_default` and `subscribe/confirm_url` hooks for premium double opt-in flows.\n* Passes the confirmation URL to `subscribe/subscriber_created`."
+msgstr "* Añade ganchos `subscribe/subscriber_consent_default` y `subscribe/confirm_url` para flujos premium de doble suscripción.\n* Pasa la URL de confirmación a `subscribe/subscriber_created`."
+
+msgid "* First release: checkout opt-in checkbox, private subscriber records storing consent, source and date, and CSV export."
+msgstr "* Primera versión: casilla de verificación de suscripción, registros privados de suscriptores que almacenan el consentimiento, la fuente y la fecha, y exportación CSV."
+

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe - Newsletter Opt-In for WooCommerce 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/subscribe\n"
-"POT-Creation-Date: 2026-06-16T20:24:26+00:00\n"
+"POT-Creation-Date: 2026-06-18T15:53:02+00:00\n"
 "PO-Revision-Date: 2026-06-15 00:00+0000\n"
 "Last-Translator: WPPoland <hello@plogins.com>\n"
 "Language-Team: Polish <pl_PL@li.org>\n"
@@ -12,10 +12,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
-"|| n%100>14) ? 1 : 2);\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Domain: plogins-subscribe\n"
+"X-Generator: WP-CLI 2.12.0\n"
 
 #. Plugin Name of the plugin
 #: subscribe.php
@@ -32,18 +31,18 @@ msgstr "https://plogins.com/subscribe/"
 msgid ""
 "Add a newsletter opt-in at checkout and collect subscribers with consent."
 msgstr ""
-"Dodaj zapis do newslettera przy składaniu zamówienia i zbieraj subskrybentów "
-"za ich zgodą."
+"Dodaj zapis do newslettera przy składaniu zamówienia i zbieraj subskrybentów"
+" za ich zgodą."
 
 #. Author of the plugin
 #: subscribe.php
-msgid "WPPoland"
-msgstr "WPPoland"
+msgid "WPPoland.com"
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: subscribe.php
-msgid "https://plogins.com/"
-msgstr "https://plogins.com/"
+msgid "https://wppoland.com"
+msgstr "https://wppoland.com"
 
 #: src/Admin/Export.php:57
 msgid ""
@@ -64,21 +63,21 @@ msgstr "Nie masz uprawnień do eksportowania subskrybentów."
 msgid "Security check failed. Please try again."
 msgstr "Weryfikacja bezpieczeństwa nie powiodła się. Spróbuj ponownie."
 
-#: src/Admin/Export.php:87 src/PostType/Subscriber.php:186
-#: src/PostType/Subscriber.php:257
+#: src/Admin/Export.php:87 src/PostType/Subscriber.php:204
+#: src/PostType/Subscriber.php:275
 msgid "Email"
 msgstr "E-mail"
 
-#: src/Admin/Export.php:88 src/PostType/Subscriber.php:267
+#: src/Admin/Export.php:88 src/PostType/Subscriber.php:285
 msgid "Consent"
 msgstr "Zgoda"
 
-#: src/Admin/Export.php:89 src/PostType/Subscriber.php:191
-#: src/PostType/Subscriber.php:277
+#: src/Admin/Export.php:89 src/PostType/Subscriber.php:209
+#: src/PostType/Subscriber.php:295
 msgid "Source"
 msgstr "Źródło"
 
-#: src/Admin/Export.php:90 src/PostType/Subscriber.php:281
+#: src/Admin/Export.php:90 src/PostType/Subscriber.php:299
 msgid "Subscribed at"
 msgstr "Data zapisu"
 
@@ -119,11 +118,11 @@ msgstr "Tak, zapisz mnie do newslettera."
 
 #: src/Admin/Settings.php:105
 msgid "Where it appears"
-msgstr ""
+msgstr "Gdzie się pojawia"
 
 #: src/Admin/Settings.php:107
 msgid "Turn the opt-in on and choose where customers see it."
-msgstr ""
+msgstr "Włącz opcję i wybierz, gdzie widzą ją klienci."
 
 #: src/Admin/Settings.php:114
 msgid "Enable opt-in"
@@ -135,9 +134,11 @@ msgstr "Wyświetlaj klientom zapis do newslettera."
 
 #: src/Admin/Settings.php:124
 msgid ""
-"The master switch. When off, nothing renders anywhere and no new subscribers "
-"are collected, existing records stay intact."
+"The master switch. When off, nothing renders anywhere and no new subscribers"
+" are collected, existing records stay intact."
 msgstr ""
+"Główny wyłącznik. Gdy opcja jest wyłączona, nic się nie wyświetla i nie są "
+"zbierani nowi subskrybenci, istniejące rekordy pozostają nienaruszone."
 
 #: src/Admin/Settings.php:130
 msgid "Checkout checkbox"
@@ -149,18 +150,22 @@ msgstr "Dodaj pole wyboru zapisu przy składaniu zamówienia."
 
 #: src/Admin/Settings.php:140
 msgid ""
-"Places the checkbox in the order form so customers can subscribe as they buy "
-", the highest-intent moment. The source is recorded as “checkout”. Turn off "
-"to keep the opt-in for other placements only."
+"Places the checkbox in the order form so customers can subscribe as they "
+"buy, the highest-intent moment. The source is recorded as “checkout”. Turn "
+"off to keep the opt-in for other placements only."
 msgstr ""
+"Umieszcza pole wyboru w formularzu zamówienia, aby klienci mogli "
+"subskrybować w momencie zakupu, czyli w momencie o największej intencji. "
+"Źródło jest rejestrowane jako „checkout”. Wyłącz, aby zachować zgodę tylko "
+"dla innych miejsc docelowych."
 
 #: src/Admin/Settings.php:151
 msgid "Consent &amp; wording"
-msgstr ""
+msgstr "Zgoda &amp; sformułowanie"
 
 #: src/Admin/Settings.php:153
 msgid "Word the consent and decide whether the box starts ticked."
-msgstr ""
+msgstr "Wyraź zgodę i zdecyduj, czy pole ma zostać zaznaczone."
 
 #: src/Admin/Settings.php:160
 msgid "Checkbox label"
@@ -168,14 +173,17 @@ msgstr "Etykieta pola wyboru"
 
 #: src/Admin/Settings.php:168
 msgid ""
-"The consent text shown next to the checkbox. State plainly what the customer "
-"agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
+"The consent text shown next to the checkbox. State plainly what the customer"
+" agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
 "the default below."
 msgstr ""
+"Tekst zgody wyświetlany obok pola wyboru. Jasno określ, na co klient wyraża "
+"zgodę, niejasne sformułowania osłabiają zgodę na RODO. Pozostaw puste, aby "
+"użyć wartości domyślnej poniżej."
 
 #: src/Admin/Settings.php:176
 msgid "Live preview, how the opt-in row looks at checkout."
-msgstr ""
+msgstr "Podgląd na żywo, jak wygląda wiersz zgody przy kasie."
 
 #: src/Admin/Settings.php:182
 msgid "Default state"
@@ -183,14 +191,17 @@ msgstr "Stan domyślny"
 
 #: src/Admin/Settings.php:189
 msgid "Start with the box ticked."
-msgstr ""
+msgstr "Zacznij od zaznaczonego pola."
 
 #: src/Admin/Settings.php:192
 msgid ""
 "Leave off (recommended): the customer opts in deliberately, which is what "
-"GDPR requires. Ticking it pre-selects consent and may make it invalid in the "
-"EU/UK."
+"GDPR requires. Ticking it pre-selects consent and may make it invalid in the"
+" EU/UK."
 msgstr ""
+"Rezygnacja (zalecane): klient wyraża zgodę świadomie, czego wymaga RODO. "
+"Zaznaczenie tej opcji powoduje wstępną selekcję zgody i może spowodować jej "
+"nieważność w UE/Wielka Brytania."
 
 #: src/PostType/Subscriber.php:57 src/PostType/Subscriber.php:59
 #: src/PostType/Subscriber.php:60
@@ -217,23 +228,23 @@ msgstr "Nie znaleziono subskrybentów."
 msgid "No subscribers in Trash."
 msgstr "Brak subskrybentów w koszu."
 
-#: src/PostType/Subscriber.php:192 src/Service/Checkout.php:88
+#: src/PostType/Subscriber.php:210 src/Service/Checkout.php:88
 msgid "Subscribed"
 msgstr "Zapisany"
 
-#: src/PostType/Subscriber.php:239
+#: src/PostType/Subscriber.php:257
 msgid "Subscriber details"
 msgstr "Szczegóły subskrybenta"
 
-#: src/PostType/Subscriber.php:271
+#: src/PostType/Subscriber.php:289
 msgid "Explicit opt-in recorded"
 msgstr "Zapisano wyraźną zgodę"
 
-#: src/PostType/Subscriber.php:272
+#: src/PostType/Subscriber.php:290
 msgid "No consent recorded"
 msgstr "Nie zapisano zgody"
 
-#: src/PostType/Subscriber.php:304
+#: src/PostType/Subscriber.php:336
 msgid "Checkout"
 msgstr "Zamówienie"
 
@@ -245,6 +256,12 @@ msgstr ""
 "Subscribe - Zapis do newslettera dla WooCommerce wymaga aktywnej wtyczki "
 "WooCommerce."
 
+#~ msgid "WPPoland"
+#~ msgstr "WPPoland"
+
+#~ msgid "https://plogins.com/"
+#~ msgstr "https://plogins.com/"
+
 #~ msgid "Opt-in"
 #~ msgstr "Zapis"
 
@@ -254,11 +271,11 @@ msgstr ""
 #~ "wyświetlane."
 
 #~ msgid ""
-#~ "The consent text shown next to the checkbox. Make it clear what the "
-#~ "customer is agreeing to. Leave blank to use the default."
+#~ "The consent text shown next to the checkbox. Make it clear what the customer"
+#~ " is agreeing to. Leave blank to use the default."
 #~ msgstr ""
-#~ "Tekst zgody wyświetlany obok pola wyboru. Jasno określ, na co klient "
-#~ "wyraża zgodę. Pozostaw puste, aby użyć wartości domyślnej."
+#~ "Tekst zgody wyświetlany obok pola wyboru. Jasno określ, na co klient wyraża "
+#~ "zgodę. Pozostaw puste, aby użyć wartości domyślnej."
 
 #~ msgid "Pre-check the box (not recommended for GDPR)."
 #~ msgstr "Zaznacz pole domyślnie (niezalecane w świetle RODO)."

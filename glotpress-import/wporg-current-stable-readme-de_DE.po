@@ -1,0 +1,73 @@
+# wp.org Stable Readme translation (de_DE)
+msgid ""
+msgstr ""
+"Project-Id-Version: subscribe Stable Readme\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: plogins-i18n\n"
+
+msgid "Requires Plugins: woocommerce"
+msgstr "Erfordert Plugins: woocommerce"
+
+msgid "Adds a newsletter opt-in checkbox to the WooCommerce checkout and records each subscriber's email, consent and signup date."
+msgstr "Fügt dem WooCommerce-Checkout ein Kontrollkästchen für die Newsletter-Anmeldung hinzu und zeichnet die E-Mail-Adresse, die Einwilligung und das Anmeldedatum jedes Abonnenten auf."
+
+msgid "Subscribe puts a newsletter opt-in checkbox on your WooCommerce checkout. When a\ncustomer ticks it and places the order, their email is saved on your own site\nalong with the consent flag, where the opt-in came from, and the date. You review\nthe list under WooCommerce and export it whenever you need it."
+msgstr "„Abonnieren“ fügt in deinem WooCommerce-Checkout ein Kontrollkästchen zur Newsletter-Anmeldung ein. Wenn ein\nWenn der Kunde es ankreuzt und die Bestellung aufgibt, wird seine E-Mail-Adresse auf deiner eigenen Website gespeichert\nzusammen mit der Zustimmungsflagge, woher das Opt-in kam und dem Datum. Sie bewerten\nKlicke auf die Liste unter WooCommerce und exportiere sie, wann immer Sie sie benötigen."
+
+msgid "The checkbox is unticked by default, which is what most GDPR setups need: the\ncustomer has to make an active choice to opt in. You can edit the label text, and\nnothing is ever sent to an outside service, so the email addresses stay in your\ndatabase and nowhere else."
+msgstr "Das Kontrollkästchen ist standardmäßig deaktiviert, was die meisten DSGVO-Setups benötigen: das\nDer Kunde muss eine aktive Entscheidung treffen, um sich anzumelden. Du kannst den Etikettentext bearbeiten und\nEs wird nie etwas an einen externen Dienst gesendet, daher bleiben die E-Mail-Adressen bei dir\nDatenbank und nirgendwo sonst."
+
+msgid "The plugin is built for the source to be easy to read and fork. If you hit a bug\nor want to suggest a change, the code and issue tracker live at"
+msgstr "Das Plugin ist so konzipiert, dass die Quelle leicht zu lesen und zu verzweigen ist. Wenn du auf einen Fehler stoßen\noder eine Änderung vorschlagen möchten, findest du den Code- und Issue-Tracker live unter"
+
+msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-subscribe/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-subscribe/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-subscribe\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-subscribe/issues"
+msgstr "* <strong>Dokumentation</strong> - https://plogins.com/de/plogins-subscribe/docs/\n* <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-subscribe/\n* <strong>Quellcode</strong> – https://github.com/wppoland/plogins-subscribe\n* <strong>Fehlerberichte und Funktionsanfragen</strong> – https://github.com/wppoland/plogins-subscribe/issues"
+
+msgid "* Adds a newsletter opt-in checkbox to the classic WooCommerce checkout.\n* Records the opt-in only when the customer ticks the box; it is unticked by default and the label is editable.\n* Saves each subscriber as a private custom post type record with email, consent, source and signup date.\n* Lists subscribers under WooCommerce > Subscribers in wp-admin.\n* Exports the whole list to a CSV file with one click (CSV-injection safe).\n* Skips duplicates, so the same email is never recorded twice.\n* Keeps everything in your own database. No third-party email service is involved.\n* Ships a translation template (.pot) and removes its data on uninstall.\n* Declares HPOS compatibility and works with WooCommerce 8.0 and up."
+msgstr "* Fügt dem klassischen WooCommerce-Checkout ein Kontrollkästchen zur Newsletter-Anmeldung hinzu.\n* Zeichnet das Opt-in nur auf, wenn der Kunde das Kästchen ankreuzt; Es ist standardmäßig deaktiviert und die Beschriftung kann bearbeitet werden.\n* Speichert jeden Abonnenten als privaten benutzerdefinierten Beitragstyp-Datensatz mit E-Mail-Adresse, Einwilligung, Quelle und Anmeldedatum.\n* Listet Abonnenten unter WooCommerce > Abonnenten in wp-admin auf.\n* Exportiert die gesamte Liste mit einem Klick in eine CSV-Datei (CSV-Injection Safe).\n* Überspringt Duplikate, sodass dieselbe E-Mail nie zweimal aufgezeichnet wird.\n* Behält alles in deiner eigenen Datenbank. Es ist kein E-Mail-Dienst eines Drittanbieters beteiligt.\n* Versendet eine Übersetzungsvorlage (.pot) und entfernt deren Daten bei der Deinstallation.\n* Erklärt HPOS-Kompatibilität und funktioniert mit WooCommerce 8.0 und höher."
+
+msgid "1. Upload the plugin to `/wp-content/plugins/subscribe`, or install it from Plugins > Add New.\n2. Activate it. WooCommerce must be installed and active first.\n3. Open WooCommerce > Subscribe to turn the opt-in on, set the checkbox label, and choose whether it starts ticked.\n4. Find the people who opted in under WooCommerce > Subscribers, and use the Export to CSV button there to download them."
+msgstr "1. Lade das Plugin nach „/wp-content/plugins/subscribe“ hoch oder installiere es über Plugins > Neu hinzufügen.\n2. Aktiviere es. WooCommerce muss zuerst installiert und aktiv sein.\n3. Öffne WooCommerce > Abonnieren, um das Opt-in zu aktivieren, lege die Beschriftung des Kontrollkästchens fest und lege fest, ob es aktiviert werden soll.\n4. Suche unter WooCommerce > Abonnenten nach den Personen, die sich angemeldet haben, und nutze dort die Schaltfläche „In CSV exportieren“, um sie herunterzuladen."
+
+msgid "Yes. WooCommerce has to be installed and active, otherwise the plugin shows a notice and does nothing."
+msgstr "Ja. WooCommerce muss installiert und aktiv sein, ansonsten zeigt das Plugin einen Hinweis an und tut nichts."
+
+msgid "No. It starts unticked so the customer opts in on purpose, which is what GDPR consent generally requires. There is a setting to pre-tick it if your local rules permit, but that is off out of the box."
+msgstr "Nein. Das Kontrollkästchen ist zu Beginn nicht aktiviert, sodass der Kunde sich absichtlich dafür entscheidet, was im Allgemeinen für die DSGVO-Einwilligung erforderlich ist. Es gibt eine Einstellung, um es vorab anzukreuzen, wenn deine lokalen Regeln dies zulassen, aber das ist standardmäßig deaktiviert."
+
+msgid "In your WordPress database, as private \"Subscriber\" records under the WooCommerce menu. Each one holds the email, the consent flag, the source and the signup date. You can export the lot to CSV."
+msgstr "In deiner WordPress-Datenbank als private „Abonnenten“-Einträge im WooCommerce-Menü. Jeder enthält die E-Mail-Adresse, das Einwilligungskennzeichen, die Quelle und das Anmeldedatum. Du kannst das Los in CSV exportieren."
+
+msgid "No. There is no integration with any external email platform. The addresses stay on your site and go where you decide to take them."
+msgstr "Nein. Es gibt keine Integration mit einer externen E-Mail-Plattform. Die Adressen bleiben auf deiner Website und werden dort angezeigt, wo Sie sie verwenden möchten."
+
+msgid "The opt-in renders on the classic (shortcode) checkout. The plugin declares compatibility with the cart and checkout blocks so it does not trigger a warning, but the checkbox itself currently appears on the classic checkout."
+msgstr "Das Opt-in wird beim klassischen Checkout (Shortcode) gerendert. Das Plugin erklärt die Kompatibilität mit den Warenkorb- und Checkout-Blöcken, sodass es keine Warnung auslöst, aber das Kontrollkästchen selbst erscheint derzeit im klassischen Checkout."
+
+msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
+msgstr "Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es im Netzwerk oder auf einzelnen Websites. Jede Site behält ihre eigenen Einstellungen und Daten."
+
+msgid "1. The newsletter opt-in checkbox on the WooCommerce checkout.\n2. The Subscribers list with the Export to CSV button."
+msgstr "1. Das Kontrollkästchen für die Newsletter-Anmeldung im WooCommerce-Checkout.\n2. Die Abonnentenliste mit der Schaltfläche „In CSV exportieren“."
+
+msgid "Subscribe connects to no external services. The opt-in checkbox, the consent records and the CSV export all run on your own site, and no email addresses or order data are sent anywhere off it. Each subscriber is stored in your WordPress database as a private \"subscribe_subscriber\" custom post type record holding the email, consent flag, source and signup timestamp; its settings live in the \"subscribe_settings\" option. The plugin does not send email and is not tied to Mailchimp or any other mailing platform, so what you do with the exported list is entirely up to you."
+msgstr "„Abonnieren“ stellt keine Verbindung zu externen Diensten her. Das Opt-in-Kontrollkästchen, die Einwilligungsdatensätze und der CSV-Export laufen alle auf deiner eigenen Website, und es werden keine E-Mail-Adressen oder Bestelldaten irgendwohin gesendet. Jeder Abonnent wird in deiner WordPress-Datenbank als privater benutzerdefinierter Beitragstyp-Datensatz „subscribe_subscriber“ gespeichert, der die E-Mail-Adresse, das Zustimmungsflag, die Quelle und den Anmeldezeitstempel enthält. Seine Einstellungen befinden sich in der Option „subscribe_settings“. Das Plugin versendet keine E-Mails und ist nicht an Mailchimp oder eine andere Mailing-Plattform gebunden. Was du mit der exportierten Liste machen, liegt also ganz bei dir."
+
+msgid "* First stable release."
+msgstr "* Erste stabile Version."
+
+msgid "* Renamed to Plogins Subscribe for WooCommerce for a more distinctive plugin name."
+msgstr "* Umbenannt in „Plogins Subscribe for WooCommerce“, um einen eindeutigeren Plugin-Namen zu erhalten."
+
+msgid "* Adds `subscribe/checkout_after_optin` action for extra checkout fields (e.g. Subscribe Pro custom fields).\n* Adds `subscribe/subscriber_meta` filter for extra subscriber post meta on create.\n* Adds `subscribe/export_headers` and `subscribe/export_row` filters for CSV export extensions."
+msgstr "* Fügt die Aktion „subscribe/checkout_after_optin“ für zusätzliche Checkout-Felder hinzu (z. B. benutzerdefinierte Subscribe Pro-Felder).\n* Fügt beim Erstellen den Filter „subscribe/subscriber_meta“ für zusätzliche Metadaten für Abonnentenbeiträge hinzu.\n* Fügt die Filter „subscribe/export_headers“ und „subscribe/export_row“ für CSV-Exporterweiterungen hinzu."
+
+msgid "* Adds `subscribe/subscriber_consent_default` and `subscribe/confirm_url` hooks for premium double opt-in flows.\n* Passes the confirmation URL to `subscribe/subscriber_created`."
+msgstr "* Fügt die Hooks „subscribe/subscriber_consent_default“ und „subscribe/confirm_url“ für Premium-Double-Opt-In-Flows hinzu.\n* Übergibt die Bestätigungs-URL an „subscribe/subscriber_created“."
+
+msgid "* First release: checkout opt-in checkbox, private subscriber records storing consent, source and date, and CSV export."
+msgstr "* Erste Version: Checkout-Opt-in-Kontrollkästchen, private Abonnentendatensätze mit Speicherung von Einwilligung, Quelle und Datum sowie CSV-Export."
+
