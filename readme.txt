@@ -1,4 +1,4 @@
-=== Plogins Subscribe - Newsletter Signup for WooCommerce ===
+=== Subscribe - Newsletter Signup for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, newsletter, opt-in, gdpr, checkout
 Requires at least: 6.5
