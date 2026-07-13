@@ -127,33 +127,6 @@
 .subscribe-export-notice .button {
     margin-left: 0.5rem;
 }
-
-@media (prefers-color-scheme: dark) {
-    .subscribe-admin {
-        --subscribe-card-bg: #1e1e1e;
-        --subscribe-card-border: #3c3c3c;
-        --subscribe-muted: #bbb;
-        --subscribe-accent: #ec7a5e;
-        --subscribe-accent-soft: rgba(236, 122, 94, 0.1);
-    }
-
-    .subscribe-intro {
-        background: linear-gradient(135deg, #2a1f1b, #1e1e1e);
-    }
-
-    .subscribe-preview {
-        border-color: rgba(236, 122, 94, 0.42);
-    }
-
-    .subscribe-preview__box {
-        background: transparent;
-    }
-
-    .subscribe-preview.is-checked .subscribe-preview__box {
-        background: var(--subscribe-accent);
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .subscribe-preview__box::after {
         transition: none;
