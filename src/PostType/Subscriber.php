@@ -285,7 +285,7 @@ final class Subscriber implements HasHooks
         <table class="widefat striped">
             <tbody>
                 <tr>
-                    <th style="width:180px"><?php esc_html_e('Email', 'plogins-subscribe'); ?></th>
+                    <th scope="row" style="width:180px"><?php esc_html_e('Email', 'plogins-subscribe'); ?></th>
                     <td>
                         <?php if ('' !== $email) : ?>
                             <a href="<?php echo esc_url('mailto:' . $email); ?>"><?php echo esc_html($email); ?></a>
@@ -295,7 +295,7 @@ final class Subscriber implements HasHooks
                     </td>
                 </tr>
                 <tr>
-                    <th><?php esc_html_e('Consent', 'plogins-subscribe'); ?></th>
+                    <th scope="row"><?php esc_html_e('Consent', 'plogins-subscribe'); ?></th>
                     <td>
                         <?php
                         echo $consent
@@ -305,11 +305,11 @@ final class Subscriber implements HasHooks
                     </td>
                 </tr>
                 <tr>
-                    <th><?php esc_html_e('Source', 'plogins-subscribe'); ?></th>
+                    <th scope="row"><?php esc_html_e('Source', 'plogins-subscribe'); ?></th>
                     <td><?php echo esc_html($this->sourceLabel($source)); ?></td>
                 </tr>
                 <tr>
-                    <th><?php esc_html_e('Subscribed at', 'plogins-subscribe'); ?></th>
+                    <th scope="row"><?php esc_html_e('Subscribed at', 'plogins-subscribe'); ?></th>
                     <td>
                         <?php
                         echo esc_html(
