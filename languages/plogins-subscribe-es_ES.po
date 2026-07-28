@@ -48,8 +48,8 @@ msgstr "https://wppoland.com"
 msgid ""
 "Export every subscriber (email, consent, source and date) to a CSV file."
 msgstr ""
-"Exporte cada suscriptor (correo electrónico, consentimiento, fuente y fecha)"
-" a un archivo CSV."
+"Exporte cada suscriptor (correo electrónico, consentimiento, fuente y fecha) "
+"a un archivo CSV."
 
 #: src/Admin/Export.php:59
 msgid "Export to CSV"
@@ -107,8 +107,8 @@ msgid ""
 "and collect subscribers with explicit consent. Every opt-in is stored "
 "privately with its source and timestamp, ready to review and export."
 msgstr ""
-"Añade una opción de suscripción al boletín informativo acorde con el RGPD al"
-" finalizar su compra (desmarcada de forma predeterminada) y recopile "
+"Añade una opción de suscripción al boletín informativo acorde con el RGPD al "
+"finalizar su compra (desmarcada de forma predeterminada) y recopile "
 "suscriptores con su consentimiento explícito. Cada suscripción se almacena "
 "de forma privada con su fuente y marca de tiempo, lista para revisar y "
 "exportar."
@@ -135,8 +135,8 @@ msgstr "Mostrar la suscripción al boletín informativo a los clientes."
 
 #: src/Admin/Settings.php:124
 msgid ""
-"The master switch. When off, nothing renders anywhere and no new subscribers"
-" are collected, existing records stay intact."
+"The master switch. When off, nothing renders anywhere and no new subscribers "
+"are collected, existing records stay intact."
 msgstr ""
 "El interruptor maestro. Cuando está desactivado, no se muestra nada en "
 "ninguna parte y no se recopilan nuevos suscriptores; los registros "
@@ -158,8 +158,8 @@ msgid ""
 "off to keep the opt-in for other placements only."
 msgstr ""
 "Coloca la casilla de verificación en el formulario de pedido para que los "
-"clientes puedan suscribirse mientras compran, el momento de mayor intención."
-" La fuente se registra como \"pago\". Desactívelo para mantener la "
+"clientes puedan suscribirse mientras compran, el momento de mayor intención. "
+"La fuente se registra como \"pago\". Desactívelo para mantener la "
 "suscripción solo para otras ubicaciones."
 
 #: src/Admin/Settings.php:151
@@ -176,8 +176,8 @@ msgstr "Etiqueta del checkbox"
 
 #: src/Admin/Settings.php:168
 msgid ""
-"The consent text shown next to the checkbox. State plainly what the customer"
-" agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
+"The consent text shown next to the checkbox. State plainly what the customer "
+"agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
 "the default below."
 msgstr ""
 "El texto de consentimiento que se muestra junto a la casilla de "
@@ -202,8 +202,8 @@ msgstr "Comience con la casilla marcada."
 #: src/Admin/Settings.php:192
 msgid ""
 "Leave off (recommended): the customer opts in deliberately, which is what "
-"GDPR requires. Ticking it pre-selects consent and may make it invalid in the"
-" EU/UK."
+"GDPR requires. Ticking it pre-selects consent and may make it invalid in the "
+"EU/UK."
 msgstr ""
 "Dejar fuera (recomendado): el cliente opta por participar deliberadamente, "
 "que es lo que exige el RGPD. Marcarlo preselecciona el consentimiento y "
@@ -261,3 +261,63 @@ msgid ""
 msgstr ""
 "Suscríbase: la suscripción al boletín informativo para WooCommerce requiere "
 "que WooCommerce esté activo."
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Próximamente"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "desde %d zł/año"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "desde %1$s%2$d/año"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Mejora a PRO"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Permiso denegado."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Haz más con %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr "Desbloquea todas las funciones PRO"
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr "una licencia, todas las funciones PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
+msgstr "Lo que añade %s"

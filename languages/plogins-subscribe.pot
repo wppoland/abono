@@ -26,7 +26,8 @@ msgstr ""
 
 #. Description of the plugin
 #: subscribe.php
-msgid "Add a newsletter opt-in at checkout and collect subscribers with consent."
+msgid ""
+"Add a newsletter opt-in at checkout and collect subscribers with consent."
 msgstr ""
 
 #. Author of the plugin
@@ -40,7 +41,8 @@ msgid "https://wppoland.com"
 msgstr ""
 
 #: src/Admin/Export.php:57
-msgid "Export every subscriber (email, consent, source and date) to a CSV file."
+msgid ""
+"Export every subscriber (email, consent, source and date) to a CSV file."
 msgstr ""
 
 #: src/Admin/Export.php:59
@@ -55,25 +57,21 @@ msgstr ""
 msgid "Security check failed. Please try again."
 msgstr ""
 
-#: src/Admin/Export.php:87
-#: src/PostType/Subscriber.php:204
+#: src/Admin/Export.php:87 src/PostType/Subscriber.php:204
 #: src/PostType/Subscriber.php:275
 msgid "Email"
 msgstr ""
 
-#: src/Admin/Export.php:88
-#: src/PostType/Subscriber.php:285
+#: src/Admin/Export.php:88 src/PostType/Subscriber.php:285
 msgid "Consent"
 msgstr ""
 
-#: src/Admin/Export.php:89
-#: src/PostType/Subscriber.php:209
+#: src/Admin/Export.php:89 src/PostType/Subscriber.php:209
 #: src/PostType/Subscriber.php:295
 msgid "Source"
 msgstr ""
 
-#: src/Admin/Export.php:90
-#: src/PostType/Subscriber.php:299
+#: src/Admin/Export.php:90 src/PostType/Subscriber.php:299
 msgid "Subscribed at"
 msgstr ""
 
@@ -98,11 +96,13 @@ msgid "Grow your newsletter from checkout"
 msgstr ""
 
 #: src/Admin/Settings.php:89
-msgid "Add a GDPR-minded newsletter opt-in to your checkout (unchecked by default) and collect subscribers with explicit consent. Every opt-in is stored privately with its source and timestamp, ready to review and export."
+msgid ""
+"Add a GDPR-minded newsletter opt-in to your checkout (unchecked by default) "
+"and collect subscribers with explicit consent. Every opt-in is stored "
+"privately with its source and timestamp, ready to review and export."
 msgstr ""
 
-#: src/Admin/Settings.php:94
-#: src/Service/SettingsStore.php:62
+#: src/Admin/Settings.php:94 src/Service/SettingsStore.php:62
 msgid "Yes, sign me up for the newsletter."
 msgstr ""
 
@@ -123,7 +123,9 @@ msgid "Show the newsletter opt-in to customers."
 msgstr ""
 
 #: src/Admin/Settings.php:124
-msgid "The master switch. When off, nothing renders anywhere and no new subscribers are collected, existing records stay intact."
+msgid ""
+"The master switch. When off, nothing renders anywhere and no new subscribers "
+"are collected, existing records stay intact."
 msgstr ""
 
 #: src/Admin/Settings.php:130
@@ -135,7 +137,10 @@ msgid "Add the opt-in checkbox at checkout."
 msgstr ""
 
 #: src/Admin/Settings.php:140
-msgid "Places the checkbox in the order form so customers can subscribe as they buy, the highest-intent moment. The source is recorded as “checkout”. Turn off to keep the opt-in for other placements only."
+msgid ""
+"Places the checkbox in the order form so customers can subscribe as they "
+"buy, the highest-intent moment. The source is recorded as “checkout”. Turn "
+"off to keep the opt-in for other placements only."
 msgstr ""
 
 #: src/Admin/Settings.php:151
@@ -151,7 +156,10 @@ msgid "Checkbox label"
 msgstr ""
 
 #: src/Admin/Settings.php:168
-msgid "The consent text shown next to the checkbox. State plainly what the customer agrees to receive, vague wording weakens GDPR consent. Leave blank to use the default below."
+msgid ""
+"The consent text shown next to the checkbox. State plainly what the customer "
+"agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
+"the default below."
 msgstr ""
 
 #: src/Admin/Settings.php:176
@@ -167,11 +175,13 @@ msgid "Start with the box ticked."
 msgstr ""
 
 #: src/Admin/Settings.php:192
-msgid "Leave off (recommended): the customer opts in deliberately, which is what GDPR requires. Ticking it pre-selects consent and may make it invalid in the EU/UK."
+msgid ""
+"Leave off (recommended): the customer opts in deliberately, which is what "
+"GDPR requires. Ticking it pre-selects consent and may make it invalid in the "
+"EU/UK."
 msgstr ""
 
-#: src/PostType/Subscriber.php:57
-#: src/PostType/Subscriber.php:59
+#: src/PostType/Subscriber.php:57 src/PostType/Subscriber.php:59
 #: src/PostType/Subscriber.php:60
 msgid "Subscribers"
 msgstr ""
@@ -180,8 +190,7 @@ msgstr ""
 msgid "Subscriber"
 msgstr ""
 
-#: src/PostType/Subscriber.php:61
-#: src/PostType/Subscriber.php:62
+#: src/PostType/Subscriber.php:61 src/PostType/Subscriber.php:62
 msgid "View Subscriber"
 msgstr ""
 
@@ -197,8 +206,7 @@ msgstr ""
 msgid "No subscribers in Trash."
 msgstr ""
 
-#: src/PostType/Subscriber.php:210
-#: src/Service/Checkout.php:88
+#: src/PostType/Subscriber.php:210 src/Service/Checkout.php:88
 msgid "Subscribed"
 msgstr ""
 
@@ -219,5 +227,67 @@ msgid "Checkout"
 msgstr ""
 
 #: subscribe.php:47
-msgid "Subscribe - Newsletter Opt-In for WooCommerce requires WooCommerce to be active."
+msgid ""
+"Subscribe - Newsletter Opt-In for WooCommerce requires WooCommerce to be "
+"active."
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr ""
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr ""
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
 msgstr ""

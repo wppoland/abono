@@ -31,8 +31,8 @@ msgstr "https://plogins.com/de/subscribe/"
 msgid ""
 "Add a newsletter opt-in at checkout and collect subscribers with consent."
 msgstr ""
-"Füge an der Kasse ein Newsletter-Opt-in hinzu und sammeln Sie Abonnenten mit"
-" Einwilligung."
+"Füge an der Kasse ein Newsletter-Opt-in hinzu und sammeln Sie Abonnenten mit "
+"Einwilligung."
 
 #. Author of the plugin
 #: subscribe.php
@@ -48,8 +48,8 @@ msgstr "https://wppoland.com"
 msgid ""
 "Export every subscriber (email, consent, source and date) to a CSV file."
 msgstr ""
-"Exportiere jeden Abonnenten (E-Mail, Einwilligung, Quelle und Datum) in eine"
-" CSV-Datei."
+"Exportiere jeden Abonnenten (E-Mail, Einwilligung, Quelle und Datum) in eine "
+"CSV-Datei."
 
 #: src/Admin/Export.php:59
 msgid "Export to CSV"
@@ -134,8 +134,8 @@ msgstr "Zeige den Kunden das Newsletter-Opt-in an."
 
 #: src/Admin/Settings.php:124
 msgid ""
-"The master switch. When off, nothing renders anywhere and no new subscribers"
-" are collected, existing records stay intact."
+"The master switch. When off, nothing renders anywhere and no new subscribers "
+"are collected, existing records stay intact."
 msgstr ""
 "Der Hauptschalter. Wenn diese Option deaktiviert ist, wird nirgendwo "
 "gerendert und es werden keine neuen Abonnenten erfasst. Vorhandene "
@@ -157,8 +157,8 @@ msgid ""
 msgstr ""
 "Platziert das Kontrollkästchen im Bestellformular, damit Kunden sich beim "
 "Kauf anmelden können, also im Moment der höchsten Kaufabsicht. Die Quelle "
-"wird als „Checkout“ erfasst. Deaktiviere diese Option, um das Opt-in nur für"
-" andere Platzierungen beizubehalten."
+"wird als „Checkout“ erfasst. Deaktiviere diese Option, um das Opt-in nur für "
+"andere Platzierungen beizubehalten."
 
 #: src/Admin/Settings.php:151
 msgid "Consent &amp; wording"
@@ -175,8 +175,8 @@ msgstr "Beschriftung des Kontrollkästchens"
 
 #: src/Admin/Settings.php:168
 msgid ""
-"The consent text shown next to the checkbox. State plainly what the customer"
-" agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
+"The consent text shown next to the checkbox. State plainly what the customer "
+"agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
 "the default below."
 msgstr ""
 "Der neben dem Kontrollkästchen angezeigte Einwilligungstext. Gib deutlich "
@@ -199,8 +199,8 @@ msgstr "Beginne mit dem angekreuzten Kästchen."
 #: src/Admin/Settings.php:192
 msgid ""
 "Leave off (recommended): the customer opts in deliberately, which is what "
-"GDPR requires. Ticking it pre-selects consent and may make it invalid in the"
-" EU/UK."
+"GDPR requires. Ticking it pre-selects consent and may make it invalid in the "
+"EU/UK."
 msgstr ""
 "Weglassen (empfohlen): Der Kunde entscheidet sich bewusst dafür, was die "
 "DSGVO erfordert. Wenn du es ankreuzen, wird die Einwilligung vorausgewählt "
@@ -259,3 +259,63 @@ msgid ""
 msgstr ""
 "Abonnieren – Newsletter-Opt-In für WooCommerce erfordert, dass WooCommerce "
 "aktiv ist."
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Demnächst"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Demnächst"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "ab %d zł/Jahr"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "ab %1$s%2$d/Jahr"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Auf PRO upgraden"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Benachrichtige mich"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Benachrichtige mich"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Zugriff verweigert."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Mehr erreichen mit %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Diesen Hinweis ausblenden"
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr "Alle PRO-Funktionen freischalten"
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr "eine Lizenz, alle PRO-Funktionen"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
+msgstr "Was %s ergänzt"

@@ -12,7 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
 "X-Domain: plogins-subscribe\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -31,8 +32,8 @@ msgstr "https://plogins.com/subscribe/"
 msgid ""
 "Add a newsletter opt-in at checkout and collect subscribers with consent."
 msgstr ""
-"Dodaj zapis do newslettera przy składaniu zamówienia i zbieraj subskrybentów"
-" za ich zgodą."
+"Dodaj zapis do newslettera przy składaniu zamówienia i zbieraj subskrybentów "
+"za ich zgodą."
 
 #. Author of the plugin
 #: subscribe.php
@@ -134,8 +135,8 @@ msgstr "Wyświetlaj klientom zapis do newslettera."
 
 #: src/Admin/Settings.php:124
 msgid ""
-"The master switch. When off, nothing renders anywhere and no new subscribers"
-" are collected, existing records stay intact."
+"The master switch. When off, nothing renders anywhere and no new subscribers "
+"are collected, existing records stay intact."
 msgstr ""
 "Główny wyłącznik. Gdy opcja jest wyłączona, nic się nie wyświetla i nie są "
 "zbierani nowi subskrybenci, istniejące rekordy pozostają nienaruszone."
@@ -173,8 +174,8 @@ msgstr "Etykieta pola wyboru"
 
 #: src/Admin/Settings.php:168
 msgid ""
-"The consent text shown next to the checkbox. State plainly what the customer"
-" agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
+"The consent text shown next to the checkbox. State plainly what the customer "
+"agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
 "the default below."
 msgstr ""
 "Tekst zgody wyświetlany obok pola wyboru. Jasno określ, na co klient wyraża "
@@ -196,8 +197,8 @@ msgstr "Zacznij od zaznaczonego pola."
 #: src/Admin/Settings.php:192
 msgid ""
 "Leave off (recommended): the customer opts in deliberately, which is what "
-"GDPR requires. Ticking it pre-selects consent and may make it invalid in the"
-" EU/UK."
+"GDPR requires. Ticking it pre-selects consent and may make it invalid in the "
+"EU/UK."
 msgstr ""
 "Rezygnacja (zalecane): klient wyraża zgodę świadomie, czego wymaga RODO. "
 "Zaznaczenie tej opcji powoduje wstępną selekcję zgody i może spowodować jej "
@@ -256,6 +257,66 @@ msgstr ""
 "Subscribe - Zapis do newslettera dla WooCommerce wymaga aktywnej wtyczki "
 "WooCommerce."
 
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Wkrótce"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Wkrótce"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "od %d zł/rok"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "od %1$s%2$d/rok"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Przejdź na PRO"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Powiadom mnie"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Powiadom mnie"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Brak uprawnień."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Zrób więcej dzięki %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Odrzuć to powiadomienie"
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr "Odblokuj wszystkie funkcje PRO"
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr "jedna licencja, wszystkie funkcje PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
+msgstr "Co dodaje %s"
+
 #~ msgid "WPPoland"
 #~ msgstr "WPPoland"
 
@@ -271,11 +332,11 @@ msgstr ""
 #~ "wyświetlane."
 
 #~ msgid ""
-#~ "The consent text shown next to the checkbox. Make it clear what the customer"
-#~ " is agreeing to. Leave blank to use the default."
+#~ "The consent text shown next to the checkbox. Make it clear what the "
+#~ "customer is agreeing to. Leave blank to use the default."
 #~ msgstr ""
-#~ "Tekst zgody wyświetlany obok pola wyboru. Jasno określ, na co klient wyraża "
-#~ "zgodę. Pozostaw puste, aby użyć wartości domyślnej."
+#~ "Tekst zgody wyświetlany obok pola wyboru. Jasno określ, na co klient "
+#~ "wyraża zgodę. Pozostaw puste, aby użyć wartości domyślnej."
 
 #~ msgid "Pre-check the box (not recommended for GDPR)."
 #~ msgstr "Zaznacz pole domyślnie (niezalecane w świetle RODO)."
