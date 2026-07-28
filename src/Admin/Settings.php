@@ -106,7 +106,6 @@ final class Settings implements HasHooks
             $preview_label = '' !== $label_value ? $label_value : $default_label;
             ?>
 
-            <div class="subscribe-cols">
             <form method="post" action="options.php">
                 <?php settings_fields(self::GROUP); ?>
 
@@ -210,11 +209,6 @@ final class Settings implements HasHooks
 
                 <?php submit_button(); ?>
             </form>
-
-                <?php $this->proUpsell()->aside(); ?>
-            </div>
-
-            <?php $this->proUpsell()->cards(); ?>
 
             <script>
             ( function () {
