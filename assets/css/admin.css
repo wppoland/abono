@@ -1,10 +1,10 @@
 /**
- * Subscribe — admin settings styles. A polished, dark-mode-aware card layout.
+ * Subscribe, admin settings styles. A polished, dark-mode-aware card layout.
  *
  * One restrained family touch: the section accent is the storefront's postal
  * vermilion (--subscribe-accent), so the settings screen reads as the same
  * product as the checkout opt-in. Computed to clear WCAG AA on the wp-admin
- * surface — #b83a22 is 5.73:1 on #fff and 5.03:1 on #f0f0f1 (AA text 4.5:1),
+ * surface, #b83a22 is 5.73:1 on #fff and 5.03:1 on #f0f0f1 (AA text 4.5:1),
  * and well past 3:1 as a UI accent bar. Dark scheme warms to #ec7a5e (matching
  * the storefront's dark accent) for the same reasons.
  */
@@ -72,7 +72,7 @@
 /*
  * Live preview of the checkout opt-in row. A faithful, miniature echo of the
  * storefront component so the merchant sees the effect of the label/default
- * settings without leaving the page — show, don't just toggle.
+ * settings without leaving the page, show, don't just toggle.
  */
 .subscribe-preview {
     margin-top: 0.75rem;
@@ -134,7 +134,7 @@
 }
 
 /* ------------------------------------------------------------------ *
- * PRO upsell — dismissible banner, sidebar promo, "what PRO adds"
+ * PRO upsell, dismissible banner, sidebar promo, "what PRO adds"
  * locked cards. Pure advertising (no disabled inputs), scoped to
  * .subscribe-admin so nothing leaks into the rest of wp-admin. The
  * accent reuses the family postal vermilion (--subscribe-accent),

@@ -1,9 +1,9 @@
 /**
- * Subscribe — checkout opt-in.
+ * Subscribe, checkout opt-in.
  *
  * Presentation only: reflects the checkbox state onto the row so the postmark
  * can land when the shopper franks their consent. No behaviour, no submission
- * logic — WooCommerce owns the form. Degrades cleanly with JS off (the box and
+ * logic, WooCommerce owns the form. Degrades cleanly with JS off (the box and
  * the inked checkmark still work; only the postmark flourish is skipped).
  */
 (function () {

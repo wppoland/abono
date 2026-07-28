@@ -19,7 +19,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: subscribe.php
 msgid "Subscribe - Newsletter Opt-In for WooCommerce"
-msgstr "Abonnieren – Newsletter-Opt-In für WooCommerce"
+msgstr "Abonnieren, Newsletter-Opt-In für WooCommerce"
 
 #. Plugin URI of the plugin
 #: subscribe.php
@@ -257,7 +257,7 @@ msgid ""
 "Subscribe - Newsletter Opt-In for WooCommerce requires WooCommerce to be "
 "active."
 msgstr ""
-"Abonnieren – Newsletter-Opt-In für WooCommerce erfordert, dass WooCommerce "
+"Abonnieren, Newsletter-Opt-In für WooCommerce erfordert, dass WooCommerce "
 "aktiv ist."
 
 #: src/Admin/ProUpsell.php:78

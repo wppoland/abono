@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
  * records the subscriber when the order is placed and the box was ticked.
  *
  * The checkbox is unticked by default (configurable) for explicit GDPR consent.
- * Recording is idempotent — the Subscriber CPT de-duplicates by email, so a
+ * Recording is idempotent, the Subscriber CPT de-duplicates by email, so a
  * repeat customer never creates a duplicate record.
  */
 final class Checkout implements HasHooks

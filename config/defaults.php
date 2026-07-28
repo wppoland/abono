@@ -3,7 +3,7 @@
  * Default settings, merged under the option key `subscribe_settings`.
  *
  * The plugin ships enabled with the checkout checkbox on and unticked by default
- * for explicit, GDPR-minded consent. No email service is integrated — subscribers
+ * for explicit, GDPR-minded consent. No email service is integrated, subscribers
  * are stored privately for you to review and export.
  *
  * @package Subscribe

@@ -1,7 +1,7 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Plogins Subscribe - Newsletter Signup for WooCommerce — Live Preview",
+    "title": "Plogins Subscribe - Newsletter Signup for WooCommerce, Live Preview",
     "author": "WPPoland"
   },
   "landingPage": "/wp-admin/admin.php?page=subscribe-settings",
