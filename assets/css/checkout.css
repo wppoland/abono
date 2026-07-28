@@ -1,10 +1,10 @@
 /**
- * Subscribe — checkout opt-in row.
+ * Subscribe, checkout opt-in row.
  *
  * The moment that matters is consent: the tick. We treat it like a piece of
- * mail being franked — the box inks in, and a round postmark "lands" beside the
+ * mail being franked, the box inks in, and a round postmark "lands" beside the
  * label confirming the choice. Postal vermilion, grounded in stamps and wax
- * seals — deliberately not a default checkout blue.
+ * seals, deliberately not a default checkout blue.
  *
  * Rendered inside the merchant's theme: inherit type and colour, expose
  * themeable --subscribe-* tokens, reserve space (no layout shift), and keep the
@@ -12,7 +12,7 @@
  */
 
 .subscribe-optin {
-    /* Postal vermilion — the franking ink. Themeable, with a sane fallback.
+    /* Postal vermilion, the franking ink. Themeable, with a sane fallback.
        Deepened to clear WCAG AA (>=4.5:1) as text on the card surface even on a
        light-grey checkout, and >=3:1 as a control border. */
     --subscribe-accent: #b83a22;
@@ -95,7 +95,7 @@
 /*
  * The postmark. A round, ruled stamp that lands beside the label on opt-in.
  * Space is reserved at all times (visibility/opacity, never display) so the
- * row never reflows — CLS is a feature.
+ * row never reflows, CLS is a feature.
  */
 .subscribe-optin__mark {
     flex: 0 0 auto;
@@ -112,12 +112,12 @@
     letter-spacing: 0.04em;
     line-height: 1.05;
     text-transform: uppercase;
-    /* Reserved but hidden — no layout shift when it lands. */
+    /* Reserved but hidden, no layout shift when it lands. */
     opacity: 0;
     transform: rotate(-12deg) scale(0.4);
     transition: opacity 0.2s ease, transform 0.2s ease;
     pointer-events: none;
-    /* Inner ring of a real cancellation mark — kept thin so the frank breathes. */
+    /* Inner ring of a real cancellation mark, kept thin so the frank breathes. */
     box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 3px var(--subscribe-accent);
 }
 
@@ -165,7 +165,7 @@
     }
 }
 
-/* No franking dance for those who ask for stillness — just the state. */
+/* No franking dance for those who ask for stillness, just the state. */
 @media (prefers-reduced-motion: reduce) {
     .subscribe-optin__input,
     .subscribe-optin__input::after,

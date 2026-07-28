@@ -248,6 +248,8 @@ final class Settings implements HasHooks
                 sync();
             } )();
             </script>
+
+            <?php $this->proUpsell()->cards(); ?>
         </div>
         <?php
     }

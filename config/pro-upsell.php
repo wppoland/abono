@@ -17,8 +17,8 @@ return [
     'currency'   => 'EUR',
     'price_pln'  => 129,
     'lead'       => [
-        'en' => 'Welcome email, double opt-in, custom fields and Mailchimp, Brevo or Klaviyo sync ship in version 0.6.0 — feature-complete PRO.',
-        'pl' => 'E-mail powitalny, double opt-in, własne pola i synchronizacja Mailchimp, Brevo lub Klaviyo są wdrożone w wydaniu 0.6.0 — feature-complete PRO.',
+        'en' => 'Welcome email, double opt-in, custom fields and Mailchimp, Brevo or Klaviyo sync ship in version 0.6.0. Feature-complete PRO.',
+        'pl' => 'E-mail powitalny, double opt-in, własne pola i synchronizacja Mailchimp, Brevo lub Klaviyo są wdrożone w wydaniu 0.6.0. Feature-complete PRO.',
     ],
     'features'   => [
         [

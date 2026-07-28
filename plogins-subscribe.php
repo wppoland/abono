@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       Plogins Subscribe - Newsletter Signup for WooCommerce
+ * Plugin Name:       Subscribe - Newsletter Signup for WooCommerce
  * Plugin URI:        https://plogins.com/plogins-subscribe/
  * Description:        Add a newsletter opt-in at checkout and collect subscribers with consent.
- * Version:           0.1.3
+ * Version:           1.0.5
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -14,6 +14,7 @@
  * Text Domain:       plogins-subscribe
  * Domain Path:       /languages
  * WC requires at least: 8.0
+ * WC tested up to: 10.9
  *
  * @package Subscribe
  */
@@ -24,7 +25,7 @@ namespace Subscribe;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '0.1.3';
+const VERSION     = '1.0.5';
 const PLUGIN_FILE = __FILE__;
 
 define('SUBSCRIBE_DIR', plugin_dir_path(__FILE__));

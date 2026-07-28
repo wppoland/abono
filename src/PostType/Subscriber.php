@@ -11,7 +11,7 @@ defined('ABSPATH') || exit;
 /**
  * The private custom post type that stores newsletter subscribers.
  *
- * Subscribers are never public — the CPT is registered with public => false and
+ * Subscribers are never public, the CPT is registered with public => false and
  * surfaced only in wp-admin under the WooCommerce menu. Each post stores the
  * subscriber's email (also the post title), the explicit consent flag, the
  * source the opt-in came from and the timestamp, all as post meta.
@@ -86,7 +86,7 @@ final class Subscriber implements HasHooks
     }
 
     /**
-     * Whether an email is already subscribed (idempotency guard — never store a
+     * Whether an email is already subscribed (idempotency guard, never store a
      * duplicate). Matches on the email meta, case-insensitively.
      */
     public function exists(string $email): bool
@@ -190,7 +190,7 @@ final class Subscriber implements HasHooks
         /**
          * Fires once when a brand-new subscriber has been recorded.
          *
-         * Only fires for genuinely new subscribers — the email de-duplication
+         * Only fires for genuinely new subscribers, the email de-duplication
          * above guarantees this never fires for an existing subscriber. Add-ons
          * (e.g. Subscribe Pro's welcome email) hook this to react to new opt-ins.
          *
@@ -248,7 +248,7 @@ final class Subscriber implements HasHooks
                 if ('' !== $email) {
                     printf('<a href="%1$s">%2$s</a>', esc_url('mailto:' . $email), esc_html($email));
                 } else {
-                    echo '&mdash;';
+                    echo '-';
                 }
                 break;
 
@@ -258,7 +258,7 @@ final class Subscriber implements HasHooks
 
             case 'subscribe_consented':
                 $ts = absint(get_post_meta($postId, self::META_CONSENTED, true));
-                echo esc_html($ts > 0 ? wp_date(get_option('date_format') . ' ' . get_option('time_format'), $ts) : '&mdash;');
+                echo esc_html($ts > 0 ? wp_date(get_option('date_format') . ' ' . get_option('time_format'), $ts) : '-');
                 break;
         }
     }
@@ -285,17 +285,17 @@ final class Subscriber implements HasHooks
         <table class="widefat striped">
             <tbody>
                 <tr>
-                    <th style="width:180px"><?php esc_html_e('Email', 'plogins-subscribe'); ?></th>
+                    <th scope="row" style="width:180px"><?php esc_html_e('Email', 'plogins-subscribe'); ?></th>
                     <td>
                         <?php if ('' !== $email) : ?>
                             <a href="<?php echo esc_url('mailto:' . $email); ?>"><?php echo esc_html($email); ?></a>
                         <?php else : ?>
-                            &mdash;
+                            -
                         <?php endif; ?>
                     </td>
                 </tr>
                 <tr>
-                    <th><?php esc_html_e('Consent', 'plogins-subscribe'); ?></th>
+                    <th scope="row"><?php esc_html_e('Consent', 'plogins-subscribe'); ?></th>
                     <td>
                         <?php
                         echo $consent
@@ -305,17 +305,17 @@ final class Subscriber implements HasHooks
                     </td>
                 </tr>
                 <tr>
-                    <th><?php esc_html_e('Source', 'plogins-subscribe'); ?></th>
+                    <th scope="row"><?php esc_html_e('Source', 'plogins-subscribe'); ?></th>
                     <td><?php echo esc_html($this->sourceLabel($source)); ?></td>
                 </tr>
                 <tr>
-                    <th><?php esc_html_e('Subscribed at', 'plogins-subscribe'); ?></th>
+                    <th scope="row"><?php esc_html_e('Subscribed at', 'plogins-subscribe'); ?></th>
                     <td>
                         <?php
                         echo esc_html(
                             $ts > 0
                                 ? wp_date(get_option('date_format') . ' ' . get_option('time_format'), $ts)
-                                : '—',
+                                : '-',
                         );
                         ?>
                     </td>
@@ -363,7 +363,7 @@ final class Subscriber implements HasHooks
             case self::SOURCE_CHECKOUT:
                 return __('Checkout', 'plogins-subscribe');
             case '':
-                return '—';
+                return '-';
             default:
                 return ucwords(str_replace(['_', '-'], ' ', $source));
         }

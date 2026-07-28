@@ -1,10 +1,10 @@
 /**
- * Subscribe — admin settings styles. A polished, dark-mode-aware card layout.
+ * Subscribe, admin settings styles. A polished, dark-mode-aware card layout.
  *
  * One restrained family touch: the section accent is the storefront's postal
  * vermilion (--subscribe-accent), so the settings screen reads as the same
  * product as the checkout opt-in. Computed to clear WCAG AA on the wp-admin
- * surface — #b83a22 is 5.73:1 on #fff and 5.03:1 on #f0f0f1 (AA text 4.5:1),
+ * surface, #b83a22 is 5.73:1 on #fff and 5.03:1 on #f0f0f1 (AA text 4.5:1),
  * and well past 3:1 as a UI accent bar. Dark scheme warms to #ec7a5e (matching
  * the storefront's dark accent) for the same reasons.
  */
@@ -72,7 +72,7 @@
 /*
  * Live preview of the checkout opt-in row. A faithful, miniature echo of the
  * storefront component so the merchant sees the effect of the label/default
- * settings without leaving the page — show, don't just toggle.
+ * settings without leaving the page, show, don't just toggle.
  */
 .subscribe-preview {
     margin-top: 0.75rem;
@@ -127,33 +127,6 @@
 .subscribe-export-notice .button {
     margin-left: 0.5rem;
 }
-
-@media (prefers-color-scheme: dark) {
-    .subscribe-admin {
-        --subscribe-card-bg: #1e1e1e;
-        --subscribe-card-border: #3c3c3c;
-        --subscribe-muted: #bbb;
-        --subscribe-accent: #ec7a5e;
-        --subscribe-accent-soft: rgba(236, 122, 94, 0.1);
-    }
-
-    .subscribe-intro {
-        background: linear-gradient(135deg, #2a1f1b, #1e1e1e);
-    }
-
-    .subscribe-preview {
-        border-color: rgba(236, 122, 94, 0.42);
-    }
-
-    .subscribe-preview__box {
-        background: transparent;
-    }
-
-    .subscribe-preview.is-checked .subscribe-preview__box {
-        background: var(--subscribe-accent);
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .subscribe-preview__box::after {
         transition: none;
@@ -161,24 +134,18 @@
 }
 
 /* ------------------------------------------------------------------ *
- * PRO upsell — dismissible banner, sidebar promo, "what PRO adds"
+ * PRO upsell, dismissible banner, sidebar promo, "what PRO adds"
  * locked cards. Pure advertising (no disabled inputs), scoped to
- * .subscribe-admin, using the plugin's own vermilion accent. The CTA
- * buttons use a fixed dark vermilion (--subscribe-pro-cta-bg, #a5341e,
- * 6.76:1 on white) so white text clears WCAG AA in both colour schemes;
- * the mode-flipped --subscribe-accent stays decorative only.
+ * .subscribe-admin so nothing leaks into the rest of wp-admin. The
+ * accent reuses the family postal vermilion (--subscribe-accent),
+ * #b83a22, which is 5.73:1 on white so white button text clears AA.
  * ------------------------------------------------------------------ */
 .subscribe-admin {
-    --subscribe-pro-cta-bg: #a5341e;
+    --subscribe-pro-accent: var(--subscribe-accent);
+    --subscribe-pro-muted: #646970;
     --subscribe-pro-radius: 10px;
     --subscribe-pro-radius-sm: 8px;
     --subscribe-pro-gap: 20px;
-}
-
-/* Two-column wrapper (form + promo aside); single column on narrow screens. */
-.subscribe-admin .subscribe-cols { display: grid; gap: var(--subscribe-pro-gap); grid-template-columns: 1fr; align-items: start; }
-@media (min-width: 1100px) {
-    .subscribe-admin .subscribe-cols { grid-template-columns: minmax(0, 1fr) 300px; }
 }
 
 /* Top banner */
@@ -186,57 +153,56 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    margin: 0 0 var(--subscribe-pro-gap);
+    margin: 1em 0 var(--subscribe-pro-gap);
     padding: 12px 16px;
-    border: 1px solid color-mix(in srgb, var(--subscribe-accent) 30%, var(--subscribe-card-border));
-    border-inline-start: 4px solid var(--subscribe-accent);
+    border: 1px solid color-mix(in srgb, var(--subscribe-pro-accent) 30%, #dcdcde);
+    border-inline-start: 4px solid var(--subscribe-pro-accent);
     border-radius: var(--subscribe-pro-radius);
-    background: var(--subscribe-accent-soft);
+    background: color-mix(in srgb, var(--subscribe-pro-accent) 7%, #fff);
 }
 .subscribe-admin .subscribe-pro-banner__tag,
 .subscribe-admin .subscribe-pro-card__badge,
 .subscribe-admin .subscribe-pro-aside__eyebrow {
     font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
 }
-.subscribe-admin .subscribe-pro-banner__tag { flex: 0 0 auto; padding: 2px 8px; border-radius: 999px; color: #fff; background: var(--subscribe-pro-cta-bg); }
-.subscribe-admin .subscribe-pro-banner__text { flex: 1 1 auto; margin: 0; }
-.subscribe-admin .subscribe-pro-banner__sub { margin-inline-start: 4px; color: var(--subscribe-muted); }
-.subscribe-admin .subscribe-pro-banner__price { margin-inline-start: 6px; color: var(--subscribe-muted); font-weight: 600; white-space: nowrap; }
-.subscribe-admin .subscribe-pro-banner__dismiss { flex: 0 0 auto; font-size: 18px; line-height: 1; text-decoration: none; color: var(--subscribe-muted); padding: 4px; border-radius: 4px; }
-.subscribe-admin .subscribe-pro-banner__dismiss:hover { color: var(--subscribe-accent); background: var(--subscribe-accent-soft); }
+.subscribe-admin .subscribe-pro-banner__tag { flex: 0 0 auto; padding: 2px 8px; border-radius: 999px; color: #fff; background: var(--subscribe-pro-accent); }
+.subscribe-admin .subscribe-pro-banner__text { flex: 1 1 auto; margin: 0; color: #1d2327; }
+.subscribe-admin .subscribe-pro-banner__sub { margin-inline-start: 4px; color: var(--subscribe-pro-muted); }
+.subscribe-admin .subscribe-pro-banner__price { margin-inline-start: 6px; color: var(--subscribe-pro-muted); font-weight: 600; white-space: nowrap; }
+.subscribe-admin .subscribe-pro-banner__dismiss { flex: 0 0 auto; font-size: 18px; line-height: 1; text-decoration: none; color: var(--subscribe-pro-muted); padding: 4px; border-radius: 4px; }
+.subscribe-admin .subscribe-pro-banner__dismiss:hover { color: #1d2327; background: rgba(0, 0, 0, .05); }
 
-/* Accent CTA buttons (override WP blue with the readable dark vermilion) */
+/* Accent CTA buttons (override WP blue with the family accent, white text AA) */
 .subscribe-admin .subscribe-pro-banner__cta.button-primary,
 .subscribe-admin .subscribe-pro-aside__cta.button-primary {
-    background: var(--subscribe-pro-cta-bg); border-color: color-mix(in srgb, var(--subscribe-pro-cta-bg) 80%, #000); color: #fff; text-shadow: none; box-shadow: none;
+    background: var(--subscribe-pro-accent); border-color: color-mix(in srgb, var(--subscribe-pro-accent) 80%, #000); color: #fff; text-shadow: none; box-shadow: none;
 }
 .subscribe-admin .subscribe-pro-banner__cta.button-primary:hover,
-.subscribe-admin .subscribe-pro-aside__cta.button-primary:hover { background: color-mix(in srgb, var(--subscribe-pro-cta-bg) 88%, #000); border-color: color-mix(in srgb, var(--subscribe-pro-cta-bg) 70%, #000); }
+.subscribe-admin .subscribe-pro-aside__cta.button-primary:hover { background: color-mix(in srgb, var(--subscribe-pro-accent) 88%, #000); }
 
 /* Sidebar promo card */
 .subscribe-admin .subscribe-pro-aside {
-    background: var(--subscribe-card-bg); border: 1px solid var(--subscribe-card-border); border-top: 3px solid var(--subscribe-accent); border-radius: var(--subscribe-pro-radius); padding: 18px 20px; position: sticky; top: 40px;
+    background: #fff; border: 1px solid #dcdcde; border-top: 3px solid var(--subscribe-pro-accent); border-radius: var(--subscribe-pro-radius); padding: 18px 20px;
 }
-.subscribe-admin .subscribe-pro-aside__eyebrow { margin: 0 0 4px; color: var(--subscribe-accent); }
-.subscribe-admin .subscribe-pro-aside__heading { margin: 0 0 12px; font-size: 16px; line-height: 1.3; border: 0; padding: 0; }
+.subscribe-admin .subscribe-pro-aside__eyebrow { margin: 0 0 4px; color: var(--subscribe-pro-accent); }
+.subscribe-admin .subscribe-pro-aside__heading { margin: 0 0 12px; font-size: 16px; line-height: 1.3; }
 .subscribe-admin .subscribe-pro-aside__list { margin: 0 0 16px; padding: 0; list-style: none; }
-.subscribe-admin .subscribe-pro-aside__list li { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; font-size: 13px; }
+.subscribe-admin .subscribe-pro-aside__list li { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; color: #1d2327; font-size: 13px; }
 .subscribe-admin .subscribe-pro-aside__lock::before,
-.subscribe-admin .subscribe-pro-card__lock::before { content: "\f160"; font-family: dashicons; font-size: 15px; line-height: 1.2; color: var(--subscribe-accent); }
+.subscribe-admin .subscribe-pro-card__lock::before { content: "\f160"; font-family: dashicons; font-size: 15px; line-height: 1.2; color: var(--subscribe-pro-accent); }
 .subscribe-admin .subscribe-pro-aside__cta { width: 100%; text-align: center; }
-.subscribe-admin .subscribe-pro-aside__price { margin: 10px 0 0; font-size: 12px; color: var(--subscribe-muted); text-align: center; }
+.subscribe-admin .subscribe-pro-aside__price { margin: 10px 0 0; font-size: 12px; color: var(--subscribe-pro-muted); text-align: center; }
 
 /* "What PRO adds" locked cards */
-.subscribe-admin .subscribe-pro-cards { max-width: 60rem; margin: var(--subscribe-pro-gap) 0 0; }
-.subscribe-admin .subscribe-pro-cards__title { font-size: 15px; margin: 0 0 12px; border: 0; padding: 0; }
+.subscribe-admin .subscribe-pro-cards { margin: var(--subscribe-pro-gap) 0 0; }
+.subscribe-admin .subscribe-pro-cards__title { font-size: 15px; margin: 0 0 12px; }
 .subscribe-admin .subscribe-pro-cards__grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
-.subscribe-admin .subscribe-pro-card { position: relative; padding: 16px; border: 1px solid var(--subscribe-card-border); border-radius: var(--subscribe-pro-radius-sm); background: var(--subscribe-accent-soft); }
-.subscribe-admin .subscribe-pro-card__badge { position: absolute; top: 12px; inset-inline-end: 12px; padding: 1px 7px; border-radius: 999px; color: var(--subscribe-accent); border: 1px solid color-mix(in srgb, var(--subscribe-accent) 40%, var(--subscribe-card-bg)); }
+.subscribe-admin .subscribe-pro-card { position: relative; padding: 16px; border: 1px solid #dcdcde; border-radius: var(--subscribe-pro-radius-sm); background: color-mix(in srgb, var(--subscribe-pro-accent) 3%, #fff); }
+.subscribe-admin .subscribe-pro-card__badge { position: absolute; top: 12px; inset-inline-end: 12px; padding: 1px 7px; border-radius: 999px; color: var(--subscribe-pro-accent); border: 1px solid color-mix(in srgb, var(--subscribe-pro-accent) 40%, #fff); }
 .subscribe-admin .subscribe-pro-card__lock { display: inline-block; margin-bottom: 6px; }
 .subscribe-admin .subscribe-pro-card__title { margin: 0 0 6px; font-size: 14px; line-height: 1.3; }
-.subscribe-admin .subscribe-pro-card__desc { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--subscribe-muted); }
+.subscribe-admin .subscribe-pro-card__desc { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--subscribe-pro-muted); }
 
 @media (prefers-reduced-motion: no-preference) {
-    .subscribe-admin .subscribe-pro-banner__cta,
-    .subscribe-admin .subscribe-pro-aside__cta { transition: background-color .15s ease, border-color .15s ease; }
+    .subscribe-admin .subscribe-pro-banner__cta, .subscribe-admin .subscribe-pro-aside__cta { transition: background-color .15s ease, border-color .15s ease; }
 }
