@@ -25,14 +25,14 @@ database and nowhere else.
 
 The plugin is built for the source to be easy to read and fork. If you hit a bug
 or want to suggest a change, the code and issue tracker live at
-https://github.com/wppoland/plogins-subscribe.
+[github.com/wppoland/plogins-subscribe](https://github.com/wppoland/plogins-subscribe).
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-subscribe/docs/
-* **Plugin page** - https://plogins.com/plogins-subscribe/
-* **Source code** - https://github.com/wppoland/plogins-subscribe
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-subscribe/issues
+* **Documentation**: [plogins.com/plogins-subscribe/docs/](https://plogins.com/plogins-subscribe/docs/)
+* **Plugin page**: [plogins.com/plogins-subscribe/](https://plogins.com/plogins-subscribe/)
+* **Source code**: [github.com/wppoland/plogins-subscribe](https://github.com/wppoland/plogins-subscribe)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-subscribe/issues](https://github.com/wppoland/plogins-subscribe/issues)
 
 
 = What it does =
