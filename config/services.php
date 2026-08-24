@@ -34,6 +34,8 @@ return static function (Container $c): void {
         $c->get(Subscriber::class),
     ));
 
+    $c->singleton(\Subscribe\Service\SubscribePrivacyService::class, static fn (): \Subscribe\Service\SubscribePrivacyService => new \Subscribe\Service\SubscribePrivacyService());
+
     // Admin (only needed in wp-admin context).
     if (is_admin()) {
         $c->singleton(Settings::class, static fn (): Settings => new Settings());
