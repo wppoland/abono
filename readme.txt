@@ -92,7 +92,7 @@ Subscribe connects to no external services. The opt-in checkbox, the consent rec
 
 == Translations ==
 
-Plogins Subscribe includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-subscribe`, so WordPress.org language packs can also override or extend these bundled translations.
+Plogins Subscribe is fully translatable and ships the `plogins-subscribe.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
 
