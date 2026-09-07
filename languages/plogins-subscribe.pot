@@ -2,47 +2,49 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Subscribe - Newsletter Opt-In for WooCommerce 0.1.1\n"
+"Project-Id-Version: Plogins Subscribe - Newsletter Signup for WooCommerce 1.0.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/subscribe\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-18T15:53:02+00:00\n"
+"POT-Creation-Date: 2026-09-07T12:57:15+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: plogins-subscribe\n"
 
 #. Plugin Name of the plugin
-#: subscribe.php
-msgid "Subscribe - Newsletter Opt-In for WooCommerce"
+#: plogins-subscribe.php
+msgid "Plogins Subscribe - Newsletter Signup for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: subscribe.php
-msgid "https://plogins.com/subscribe/"
+#: plogins-subscribe.php
+msgid "https://plogins.com/plogins-subscribe/"
 msgstr ""
 
 #. Description of the plugin
-#: subscribe.php
-msgid ""
-"Add a newsletter opt-in at checkout and collect subscribers with consent."
+#: plogins-subscribe.php
+msgid "Add a newsletter opt-in at checkout and collect subscribers with consent."
 msgstr ""
 
 #. Author of the plugin
-#: subscribe.php
+#: plogins-subscribe.php
 msgid "WPPoland.com"
 msgstr ""
 
 #. Author URI of the plugin
-#: subscribe.php
+#: plogins-subscribe.php
 msgid "https://wppoland.com"
 msgstr ""
 
+#: plogins-subscribe.php:48
+msgid "Plogins Subscribe for WooCommerce requires WooCommerce to be active."
+msgstr ""
+
 #: src/Admin/Export.php:57
-msgid ""
-"Export every subscriber (email, consent, source and date) to a CSV file."
+msgid "Export every subscriber (email, consent, source and date) to a CSV file."
 msgstr ""
 
 #: src/Admin/Export.php:59
@@ -57,131 +59,177 @@ msgstr ""
 msgid "Security check failed. Please try again."
 msgstr ""
 
-#: src/Admin/Export.php:87 src/PostType/Subscriber.php:204
-#: src/PostType/Subscriber.php:275
+#: src/Admin/Export.php:89
+#: src/PostType/Subscriber.php:217
+#: src/PostType/Subscriber.php:288
 msgid "Email"
 msgstr ""
 
-#: src/Admin/Export.php:88 src/PostType/Subscriber.php:285
+#: src/Admin/Export.php:90
+#: src/PostType/Subscriber.php:298
 msgid "Consent"
 msgstr ""
 
-#: src/Admin/Export.php:89 src/PostType/Subscriber.php:209
-#: src/PostType/Subscriber.php:295
+#: src/Admin/Export.php:91
+#: src/PostType/Subscriber.php:222
+#: src/PostType/Subscriber.php:308
 msgid "Source"
 msgstr ""
 
-#: src/Admin/Export.php:90 src/PostType/Subscriber.php:299
+#: src/Admin/Export.php:92
+#: src/PostType/Subscriber.php:312
 msgid "Subscribed at"
 msgstr ""
 
-#: src/Admin/Export.php:164
+#: src/Admin/Export.php:170
 msgid "Yes"
 msgstr ""
 
-#: src/Admin/Export.php:164
+#: src/Admin/Export.php:170
 msgid "No"
 msgstr ""
 
-#: src/Admin/Settings.php:50
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr ""
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:84
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:93
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:94
+msgid "Powiadom mnie"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:94
+msgid "Get notified"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:124
+msgid "Permission denied."
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:154
+#, php-format
+msgid "Do more with %s"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:161
+msgid "Dismiss this notice"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:178
+msgid "Unlock every PRO feature"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:191
+msgid "one licence, every PRO feature"
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:210
+#, php-format
+msgid "What %s adds"
+msgstr ""
+
+#: src/Admin/Settings.php:58
 msgid "Subscribe: Newsletter Opt-In"
 msgstr ""
 
-#: src/Admin/Settings.php:51
+#: src/Admin/Settings.php:59
 msgid "Subscribe"
 msgstr ""
 
-#: src/Admin/Settings.php:87
+#: src/Admin/Settings.php:97
 msgid "Grow your newsletter from checkout"
 msgstr ""
 
-#: src/Admin/Settings.php:89
-msgid ""
-"Add a GDPR-minded newsletter opt-in to your checkout (unchecked by default) "
-"and collect subscribers with explicit consent. Every opt-in is stored "
-"privately with its source and timestamp, ready to review and export."
+#: src/Admin/Settings.php:99
+msgid "Add a GDPR-minded newsletter opt-in to your checkout (unchecked by default) and collect subscribers with explicit consent. Every opt-in is stored privately with its source and timestamp, ready to review and export."
 msgstr ""
 
-#: src/Admin/Settings.php:94 src/Service/SettingsStore.php:62
+#: src/Admin/Settings.php:104
+#: src/Service/SettingsStore.php:62
 msgid "Yes, sign me up for the newsletter."
 msgstr ""
 
-#: src/Admin/Settings.php:105
+#: src/Admin/Settings.php:115
 msgid "Where it appears"
 msgstr ""
 
-#: src/Admin/Settings.php:107
+#: src/Admin/Settings.php:117
 msgid "Turn the opt-in on and choose where customers see it."
 msgstr ""
 
-#: src/Admin/Settings.php:114
+#: src/Admin/Settings.php:124
 msgid "Enable opt-in"
 msgstr ""
 
-#: src/Admin/Settings.php:121
+#: src/Admin/Settings.php:131
 msgid "Show the newsletter opt-in to customers."
 msgstr ""
 
-#: src/Admin/Settings.php:124
-msgid ""
-"The master switch. When off, nothing renders anywhere and no new subscribers "
-"are collected, existing records stay intact."
-msgstr ""
-
-#: src/Admin/Settings.php:130
-msgid "Checkout checkbox"
-msgstr ""
-
-#: src/Admin/Settings.php:137
-msgid "Add the opt-in checkbox at checkout."
+#: src/Admin/Settings.php:134
+msgid "The master switch. When off, nothing renders anywhere and no new subscribers are collected, existing records stay intact."
 msgstr ""
 
 #: src/Admin/Settings.php:140
-msgid ""
-"Places the checkbox in the order form so customers can subscribe as they "
-"buy, the highest-intent moment. The source is recorded as “checkout”. Turn "
-"off to keep the opt-in for other placements only."
+msgid "Checkout checkbox"
 msgstr ""
 
-#: src/Admin/Settings.php:151
+#: src/Admin/Settings.php:147
+msgid "Add the opt-in checkbox at checkout."
+msgstr ""
+
+#: src/Admin/Settings.php:150
+msgid "Places the checkbox in the order form so customers can subscribe as they buy, the highest-intent moment. The source is recorded as “checkout”. Turn off to keep the opt-in for other placements only."
+msgstr ""
+
+#: src/Admin/Settings.php:161
 msgid "Consent &amp; wording"
 msgstr ""
 
-#: src/Admin/Settings.php:153
+#: src/Admin/Settings.php:163
 msgid "Word the consent and decide whether the box starts ticked."
 msgstr ""
 
-#: src/Admin/Settings.php:160
+#: src/Admin/Settings.php:170
 msgid "Checkbox label"
 msgstr ""
 
-#: src/Admin/Settings.php:168
-msgid ""
-"The consent text shown next to the checkbox. State plainly what the customer "
-"agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
-"the default below."
+#: src/Admin/Settings.php:178
+msgid "The consent text shown next to the checkbox. State plainly what the customer agrees to receive, vague wording weakens GDPR consent. Leave blank to use the default below."
 msgstr ""
 
-#: src/Admin/Settings.php:176
+#: src/Admin/Settings.php:186
 msgid "Live preview, how the opt-in row looks at checkout."
 msgstr ""
 
-#: src/Admin/Settings.php:182
+#: src/Admin/Settings.php:192
 msgid "Default state"
 msgstr ""
 
-#: src/Admin/Settings.php:189
+#: src/Admin/Settings.php:199
 msgid "Start with the box ticked."
 msgstr ""
 
-#: src/Admin/Settings.php:192
-msgid ""
-"Leave off (recommended): the customer opts in deliberately, which is what "
-"GDPR requires. Ticking it pre-selects consent and may make it invalid in the "
-"EU/UK."
+#: src/Admin/Settings.php:202
+msgid "Leave off (recommended): the customer opts in deliberately, which is what GDPR requires. Ticking it pre-selects consent and may make it invalid in the EU/UK."
 msgstr ""
 
-#: src/PostType/Subscriber.php:57 src/PostType/Subscriber.php:59
+#: src/PostType/Subscriber.php:57
+#: src/PostType/Subscriber.php:59
 #: src/PostType/Subscriber.php:60
 msgid "Subscribers"
 msgstr ""
@@ -190,7 +238,8 @@ msgstr ""
 msgid "Subscriber"
 msgstr ""
 
-#: src/PostType/Subscriber.php:61 src/PostType/Subscriber.php:62
+#: src/PostType/Subscriber.php:61
+#: src/PostType/Subscriber.php:62
 msgid "View Subscriber"
 msgstr ""
 
@@ -206,88 +255,41 @@ msgstr ""
 msgid "No subscribers in Trash."
 msgstr ""
 
-#: src/PostType/Subscriber.php:210 src/Service/Checkout.php:88
+#: src/PostType/Subscriber.php:223
+#: src/Service/Checkout.php:88
 msgid "Subscribed"
 msgstr ""
 
-#: src/PostType/Subscriber.php:257
+#: src/PostType/Subscriber.php:270
 msgid "Subscriber details"
 msgstr ""
 
-#: src/PostType/Subscriber.php:289
+#: src/PostType/Subscriber.php:302
 msgid "Explicit opt-in recorded"
 msgstr ""
 
-#: src/PostType/Subscriber.php:290
+#: src/PostType/Subscriber.php:303
 msgid "No consent recorded"
 msgstr ""
 
-#: src/PostType/Subscriber.php:336
+#: src/PostType/Subscriber.php:364
 msgid "Checkout"
 msgstr ""
 
-#: subscribe.php:47
-msgid ""
-"Subscribe - Newsletter Opt-In for WooCommerce requires WooCommerce to be "
-"active."
+#: src/Service/SubscribePrivacyService.php:33
+#: src/Service/SubscribePrivacyService.php:47
+#: src/Service/SubscribePrivacyService.php:69
+msgid "Newsletter Subscriptions"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:78
-msgid "Wkrótce"
+#: src/Service/SubscribePrivacyService.php:72
+msgid "Email Address"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:78
-msgid "Coming soon"
+#: src/Service/SubscribePrivacyService.php:73
+msgid "Opt-in Source"
 msgstr ""
 
-#. translators: %d: yearly price in PLN
-#: src/Admin/ProUpsell.php:83
-#, php-format
-msgid "od %d zł/rok"
-msgstr ""
-
-#. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:88
-#, php-format
-msgid "from %1$s%2$d/yr"
-msgstr ""
-
-#: src/Admin/ProUpsell.php:97
-msgid "Upgrade to PRO"
-msgstr ""
-
-#: src/Admin/ProUpsell.php:98
-msgid "Powiadom mnie"
-msgstr ""
-
-#: src/Admin/ProUpsell.php:98
-msgid "Get notified"
-msgstr ""
-
-#: src/Admin/ProUpsell.php:128
-msgid "Permission denied."
-msgstr ""
-
-#. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:158
-#, php-format
-msgid "Do more with %s"
-msgstr ""
-
-#: src/Admin/ProUpsell.php:165
-msgid "Dismiss this notice"
-msgstr ""
-
-#: src/Admin/ProUpsell.php:182
-msgid "Unlock every PRO feature"
-msgstr ""
-
-#: src/Admin/ProUpsell.php:195
-msgid "one licence, every PRO feature"
-msgstr ""
-
-#. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:214
-#, php-format
-msgid "What %s adds"
+#: src/Service/SubscribePrivacyService.php:74
+msgid "Consented At"
 msgstr ""
