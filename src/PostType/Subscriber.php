@@ -175,8 +175,9 @@ final class Subscriber implements HasHooks
         /**
          * Filters extra post meta stored on a new subscriber.
          *
-         * Keys must start with `_subscribe_field_` or `_subscribe_pro_`. Values are
-         * stored as sanitised text fields on the subscriber post.
+         * Keys must start with `_subscribe_field_` or `_subscribe_pro_`, and the
+         * rest must be sanitize_key() safe (a-z, 0-9, underscore, hyphen).
+         * Values are stored as sanitised text fields on the subscriber post.
          *
          * @param array<string, string> $meta   Extra meta key => value pairs.
          * @param string                $email  The subscriber's sanitised email address.
@@ -332,7 +333,13 @@ final class Subscriber implements HasHooks
     {
         foreach ($meta as $key => $value) {
             $key = (string) $key;
-            if (! preg_match('/^_(subscribe_field_|subscribe_pro_)[a-z0-9_]+$/', $key)) {
+            // The hyphen is not optional here. The documented contract above is
+            // the PREFIX, and the only producer of these keys builds them with
+            // sanitize_key(), which allows a-z, 0-9, underscore AND hyphen. A
+            // custom field keyed `vat-id` therefore rendered at checkout, was
+            // enforced as required, and was then dropped on the floor by this
+            // allowlist, with nothing written and no error anywhere.
+            if (! preg_match('/^_(subscribe_field_|subscribe_pro_)[a-z0-9_-]+$/', $key)) {
                 continue;
             }
 

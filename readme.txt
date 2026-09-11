@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.10
+Stable tag: 1.0.11
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,6 +95,9 @@ Subscribe connects to no external services. The opt-in checkbox, the consent rec
 Plogins Subscribe is fully translatable and ships the `plogins-subscribe.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.11 =
+* Fixed: a custom subscriber field whose key contained a hyphen was silently discarded. The field appeared at checkout and could even be required, so the customer had to fill it in, and the value was then thrown away with no error: the subscriber record and the CSV export were empty for that column forever. Keys with only letters, digits and underscores were unaffected, which made the loss look random.
 
 = 1.0.10 =
 * Fixed: deleting the plugin left the per-user "dismiss" flag from the PRO notice in the database. Uninstall now removes it for every user, not just the one who dismissed it.
