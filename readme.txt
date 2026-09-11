@@ -97,6 +97,7 @@ Plogins Subscribe is fully translatable and ships the `plogins-subscribe.pot` te
 == Changelog ==
 
 = 1.0.11 =
+* Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
 * Fixed: a custom subscriber field whose key contained a hyphen was silently discarded. The field appeared at checkout and could even be required, so the customer had to fill it in, and the value was then thrown away with no error: the subscriber record and the CSV export were empty for that column forever. Keys with only letters, digits and underscores were unaffected, which made the loss look random.
 
 = 1.0.10 =
