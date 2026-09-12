@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.11
+Stable tag: 1.0.12
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,6 +95,10 @@ Subscribe connects to no external services. The opt-in checkbox, the consent rec
 Plogins Subscribe is fully translatable and ships the `plogins-subscribe.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.12 =
+* Fixed: the CSV export built the whole file in memory before sending a byte of it. The subscriber list was read into one array, turned into a second array of finished lines and then joined into a single string, so a shop with 20,000 subscribers measured 16.00 MB of PHP memory for a 1.3 MB file, and a longer list met the memory limit as a blank page with no download. Rows are now written out as they are read, which measured 2.00 MB for the same list, and the file it produces is byte for byte the one the old code produced.
+* Fixed: the export read each subscriber's consent record one at a time, one database query per subscriber. It now loads them 200 at a time and drops each batch again afterwards, so the same 20,000 subscribers took 100 reads instead of 20,000 and the object cache no longer grows by an entry per subscriber for the length of the download.
 
 = 1.0.11 =
 * Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
