@@ -97,7 +97,7 @@ Plogins Subscribe is fully translatable and ships the `plogins-subscribe.pot` te
 == Changelog ==
 
 = 1.0.12 =
-* Fixed: the CSV export built the whole file in memory before sending a byte of it. The subscriber list was read into one array, turned into a second array of finished lines and then joined into a single string, so a shop with 20,000 subscribers measured 16.00 MB of PHP memory for a 1.3 MB file, and a longer list met the memory limit as a blank page with no download. Rows are now written out as they are read, which measured 2.00 MB for the same list, and the file it produces is byte for byte the one the old code produced.
+* Fixed: the CSV export built the whole file in memory before sending a byte of it. The subscriber list was read into one array, turned into a second array of finished lines and then joined into a single string, so a shop with 20,000 subscribers held 13.6 MB of PHP memory for a 1.35 MB file, and a longer list met the memory limit as a blank page with no download. Rows are now written out as they are read, which holds 842 KB for the same list, most of that the ID list the export reads in one go on purpose. The file is byte for byte the one the old code produced.
 * Fixed: the export read each subscriber's consent record one at a time, one database query per subscriber. It now loads them 200 at a time and drops each batch again afterwards, so the same 20,000 subscribers took 100 reads instead of 20,000 and the object cache no longer grows by an entry per subscriber for the length of the download.
 
 = 1.0.11 =
