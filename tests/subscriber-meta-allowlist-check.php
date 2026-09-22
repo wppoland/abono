@@ -4,7 +4,7 @@
  * The subscriber meta allowlist must accept exactly the keys its only producer
  * can build, and reject everything else.
  *
- * Subscribe Pro builds custom-field meta keys with sanitize_key(), which core
+ * Abono Pro builds custom-field meta keys with sanitize_key(), which core
  * defines as preg_replace('/[^a-z0-9_\-]/', '', ...): hyphens survive by
  * design. The allowlist here used [a-z0-9_]+ and silently `continue`d on any
  * key containing one, so a merchant field keyed `vat-id` rendered at checkout,

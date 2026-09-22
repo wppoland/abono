@@ -10,7 +10,7 @@
 defined('ABSPATH') || exit;
 
 return [
-    'name'       => 'Subscribe Pro',
+    'name'       => 'Abono Pro',
     'url'        => 'https://plogins.com/plogins-subscribe-pro/pricing/',
     'sellable'   => true,
     'price_from' => 29,

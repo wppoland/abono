@@ -59,6 +59,6 @@ final class SettingsStore
 
         return '' !== $label
             ? $label
-            : __('Yes, sign me up for the newsletter.', 'plogins-subscribe');
+            : __('Yes, sign me up for the newsletter.', 'abono');
     }
 }

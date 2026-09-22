@@ -59,9 +59,9 @@ final class Export implements HasHooks
         ?>
         <div class="notice notice-info subscribe-export-notice">
             <p>
-                <?php esc_html_e('Export every subscriber (email, consent, source and date) to a CSV file.', 'plogins-subscribe'); ?>
+                <?php esc_html_e('Export every subscriber (email, consent, source and date) to a CSV file.', 'abono'); ?>
                 <a class="button button-primary" href="<?php echo esc_url($url); ?>">
-                    <?php esc_html_e('Export to CSV', 'plogins-subscribe'); ?>
+                    <?php esc_html_e('Export to CSV', 'abono'); ?>
                 </a>
             </p>
         </div>
@@ -74,7 +74,7 @@ final class Export implements HasHooks
     public function handle(): void
     {
         if (! current_user_can('manage_woocommerce')) {
-            wp_die(esc_html__('You are not allowed to export subscribers.', 'plogins-subscribe'), '', ['response' => 403]);
+            wp_die(esc_html__('You are not allowed to export subscribers.', 'abono'), '', ['response' => 403]);
         }
 
         $nonce = isset($_GET['_subscribe_nonce'])
@@ -82,16 +82,16 @@ final class Export implements HasHooks
             : '';
 
         if (! wp_verify_nonce($nonce, self::NONCE)) {
-            wp_die(esc_html__('Security check failed. Please try again.', 'plogins-subscribe'), '', ['response' => 403]);
+            wp_die(esc_html__('Security check failed. Please try again.', 'abono'), '', ['response' => 403]);
         }
 
         $headers = apply_filters(
             'subscribe/export_headers',
             [
-                __('Email', 'plogins-subscribe'),
-                __('Consent', 'plogins-subscribe'),
-                __('Source', 'plogins-subscribe'),
-                __('Subscribed at', 'plogins-subscribe'),
+                __('Email', 'abono'),
+                __('Consent', 'abono'),
+                __('Source', 'abono'),
+                __('Subscribed at', 'abono'),
             ],
         );
 
@@ -164,7 +164,7 @@ final class Export implements HasHooks
                     'subscribe/export_row',
                     [
                         $email,
-                        $consent ? __('Yes', 'plogins-subscribe') : __('No', 'plogins-subscribe'),
+                        $consent ? __('Yes', 'abono') : __('No', 'abono'),
                         $this->subscribers->sourceLabel($source),
                         $ts > 0 ? gmdate('Y-m-d H:i:s', $ts) : '',
                     ],

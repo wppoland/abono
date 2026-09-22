@@ -85,14 +85,14 @@ final class Checkout implements HasHooks
                     <?php checked($checked, true); ?>
                 />
                 <span class="subscribe-optin__text"><?php echo esc_html($this->settings->label()); ?></span>
-                <span class="subscribe-optin__mark" aria-hidden="true"><?php echo esc_html__('Subscribed', 'plogins-subscribe'); ?></span>
+                <span class="subscribe-optin__mark" aria-hidden="true"><?php echo esc_html__('Subscribed', 'abono'); ?></span>
             </label>
         </p>
         <?php
         /**
          * Fires after the checkout opt-in checkbox markup.
          *
-         * Add-ons (e.g. Subscribe Pro custom fields) may output extra inputs here.
+         * Add-ons (e.g. Abono Pro custom fields) may output extra inputs here.
          */
         do_action('subscribe/checkout_after_optin');
     }

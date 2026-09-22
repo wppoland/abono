@@ -190,10 +190,10 @@ namespace Subscribe\Admin {
             $headers = \apply_filters(
                 'subscribe/export_headers',
                 [
-                    \__('Email', 'plogins-subscribe'),
-                    \__('Consent', 'plogins-subscribe'),
-                    \__('Source', 'plogins-subscribe'),
-                    \__('Subscribed at', 'plogins-subscribe'),
+                    \__('Email', 'abono'),
+                    \__('Consent', 'abono'),
+                    \__('Source', 'abono'),
+                    \__('Subscribed at', 'abono'),
                 ],
             );
 
@@ -263,7 +263,7 @@ namespace Subscribe\Admin {
                     'subscribe/export_row',
                     [
                         $email,
-                        $consent ? \__('Yes', 'plogins-subscribe') : \__('No', 'plogins-subscribe'),
+                        $consent ? \__('Yes', 'abono') : \__('No', 'abono'),
                         $this->subscribers->sourceLabel($source),
                         $ts > 0 ? gmdate('Y-m-d H:i:s', $ts) : '',
                     ],
@@ -317,10 +317,10 @@ namespace {
         $line->setAccessible(true);
 
         $headers = [
-            __('Email', 'plogins-subscribe'),
-            __('Consent', 'plogins-subscribe'),
-            __('Source', 'plogins-subscribe'),
-            __('Subscribed at', 'plogins-subscribe'),
+            __('Email', 'abono'),
+            __('Consent', 'abono'),
+            __('Source', 'abono'),
+            __('Subscribed at', 'abono'),
         ];
 
         $out  = '';

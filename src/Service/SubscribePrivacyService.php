@@ -30,7 +30,7 @@ final class SubscribePrivacyService implements HasHooks
     public function registerExporters(array $exporters): array
     {
         $exporters['subscribe-subscribers'] = [
-            'exporter_friendly_name' => __('Newsletter Subscriptions', 'plogins-subscribe'),
+            'exporter_friendly_name' => __('Newsletter Subscriptions', 'abono'),
             'callback'               => [$this, 'exportSubscribers'],
         ];
 
@@ -44,7 +44,7 @@ final class SubscribePrivacyService implements HasHooks
     public function registerErasers(array $erasers): array
     {
         $erasers['subscribe-subscribers'] = [
-            'eraser_friendly_name' => __('Newsletter Subscriptions', 'plogins-subscribe'),
+            'eraser_friendly_name' => __('Newsletter Subscriptions', 'abono'),
             'callback'             => [$this, 'eraseSubscribers'],
         ];
 
@@ -66,12 +66,12 @@ final class SubscribePrivacyService implements HasHooks
 
             $items[] = [
                 'group_id'    => 'subscribe-subscribers',
-                'group_label' => __('Newsletter Subscriptions', 'plogins-subscribe'),
+                'group_label' => __('Newsletter Subscriptions', 'abono'),
                 'item_id'     => 'subscriber-' . $postId,
                 'data'        => [
-                    ['name' => __('Email Address', 'plogins-subscribe'), 'value' => $email],
-                    ['name' => __('Opt-in Source', 'plogins-subscribe'), 'value' => $source],
-                    ['name' => __('Consented At', 'plogins-subscribe'), 'value' => $consentedAt],
+                    ['name' => __('Email Address', 'abono'), 'value' => $email],
+                    ['name' => __('Opt-in Source', 'abono'), 'value' => $source],
+                    ['name' => __('Consented At', 'abono'), 'value' => $consentedAt],
                 ],
             ];
         }

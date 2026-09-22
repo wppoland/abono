@@ -1,11 +1,11 @@
-=== Plogins Subscribe - Newsletter Signup for WooCommerce ===
+=== Abono - Newsletter Signup for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, newsletter, opt-in, gdpr, checkout
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.12
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Adds a newsletter opt-in checkbox to the WooCommerce checkout and records each s
 
 == Description ==
 
-Subscribe puts a newsletter opt-in checkbox on your WooCommerce checkout. When a
+Abono puts a newsletter opt-in checkbox on your WooCommerce checkout. When a
 customer ticks it and places the order, their email is saved on your own site
 along with the consent flag, where the opt-in came from, and the date. You review
 the list under WooCommerce and export it whenever you need it.
@@ -49,7 +49,7 @@ or want to suggest a change, the code and issue tracker live at
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/subscribe`, or install it from Plugins > Add New.
+1. Upload the plugin to `/wp-content/plugins/abono`, or install it from Plugins > Add New.
 2. Activate it. WooCommerce must be installed and active first.
 3. Open WooCommerce > Subscribe to turn the opt-in on, set the checkbox label, and choose whether it starts ticked.
 4. Find the people who opted in under WooCommerce > Subscribers, and use the Export to CSV button there to download them.
@@ -88,13 +88,16 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 == External Services ==
 
-Subscribe connects to no external services. The opt-in checkbox, the consent records and the CSV export all run on your own site, and no email addresses or order data are sent anywhere off it. Each subscriber is stored in your WordPress database as a private "subscribe_subscriber" custom post type record holding the email, consent flag, source and signup timestamp; its settings live in the "subscribe_settings" option. The plugin does not send email and is not tied to Mailchimp or any other mailing platform, so what you do with the exported list is entirely up to you.
+Abono connects to no external services. The opt-in checkbox, the consent records and the CSV export all run on your own site, and no email addresses or order data are sent anywhere off it. Each subscriber is stored in your WordPress database as a private "subscribe_subscriber" custom post type record holding the email, consent flag, source and signup timestamp; its settings live in the "subscribe_settings" option. The plugin does not send email and is not tied to Mailchimp or any other mailing platform, so what you do with the exported list is entirely up to you.
 
 == Translations ==
 
-Plogins Subscribe is fully translatable and ships the `plogins-subscribe.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
+Abono is fully translatable and ships the `abono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.0 =
+* Renamed to Abono. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Abono is Esperanto for a subscription. The text domain follows the name; the stored subscribers, the consent records, the settings and every hook are unchanged.
 
 = 1.0.12 =
 * Fixed: the CSV export built the whole file in memory before sending a byte of it. The subscriber list was read into one array, turned into a second array of finished lines and then joined into a single string, so a shop with 20,000 subscribers held 13.6 MB of PHP memory for a 1.35 MB file, and a longer list met the memory limit as a blank page with no download. Rows are now written out as they are read, which holds 842 KB for the same list, most of that the ID list the export reads in one go on purpose. The file is byte for byte the one the old code produced.
