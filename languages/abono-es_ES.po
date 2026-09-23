@@ -31,7 +31,7 @@ msgstr "https://plogins.com/es/subscribe/"
 msgid ""
 "Add a newsletter opt-in at checkout and collect subscribers with consent."
 msgstr ""
-"Añade una suscripción al boletín al finalizar la compra y recopile "
+"Añade una suscripción al boletín al finalizar la compra y recopila "
 "suscriptores con su consentimiento."
 
 #. Author of the plugin
@@ -48,7 +48,7 @@ msgstr "https://wppoland.com"
 msgid ""
 "Export every subscriber (email, consent, source and date) to a CSV file."
 msgstr ""
-"Exporte cada suscriptor (correo electrónico, consentimiento, fuente y fecha) "
+"Exporta cada suscriptor (correo electrónico, consentimiento, fuente y fecha) "
 "a un archivo CSV."
 
 #: src/Admin/Export.php:59
@@ -57,7 +57,7 @@ msgstr "Exportar a CSV"
 
 #: src/Admin/Export.php:72
 msgid "You are not allowed to export subscribers."
-msgstr "No tiene permiso para exportar suscriptores."
+msgstr "No tienes permiso para exportar suscriptores."
 
 #: src/Admin/Export.php:80
 msgid "Security check failed. Please try again."
@@ -99,7 +99,7 @@ msgstr "Suscríbete"
 
 #: src/Admin/Settings.php:87
 msgid "Grow your newsletter from checkout"
-msgstr "Haga crecer su boletín desde el pago"
+msgstr "Haz crecer tu boletín desde el pago"
 
 #: src/Admin/Settings.php:89
 msgid ""
@@ -108,7 +108,7 @@ msgid ""
 "privately with its source and timestamp, ready to review and export."
 msgstr ""
 "Añade una opción de suscripción al boletín informativo acorde con el RGPD al "
-"finalizar su compra (desmarcada de forma predeterminada) y recopile "
+"finalizar tu compra (desmarcada de forma predeterminada) y recopila "
 "suscriptores con su consentimiento explícito. Cada suscripción se almacena "
 "de forma privada con su fuente y marca de tiempo, lista para revisar y "
 "exportar."
@@ -123,7 +123,7 @@ msgstr "donde aparece"
 
 #: src/Admin/Settings.php:107
 msgid "Turn the opt-in on and choose where customers see it."
-msgstr "Active la suscripción y elija dónde lo ven los clientes."
+msgstr "Activa la suscripción y elige dónde lo ven los clientes."
 
 #: src/Admin/Settings.php:114
 msgid "Enable opt-in"
@@ -159,7 +159,7 @@ msgid ""
 msgstr ""
 "Coloca la casilla de verificación en el formulario de pedido para que los "
 "clientes puedan suscribirse mientras compran, el momento de mayor intención. "
-"La fuente se registra como \"pago\". Desactívelo para mantener la "
+"La fuente se registra como \"pago\". Desactívalo para mantener la "
 "suscripción solo para otras ubicaciones."
 
 #: src/Admin/Settings.php:151
@@ -168,7 +168,7 @@ msgstr "Consentimiento y redacción"
 
 #: src/Admin/Settings.php:153
 msgid "Word the consent and decide whether the box starts ticked."
-msgstr "Redacte el consentimiento y decida si la casilla comienza marcada."
+msgstr "Redacta el consentimiento y decide si la casilla comienza marcada."
 
 #: src/Admin/Settings.php:160
 msgid "Checkbox label"
@@ -181,8 +181,8 @@ msgid ""
 "the default below."
 msgstr ""
 "El texto de consentimiento que se muestra junto a la casilla de "
-"verificación. Indique claramente lo que el cliente acepta recibir; una "
-"redacción vaga debilita el consentimiento del RGPD. Déjelo en blanco para "
+"verificación. Indica claramente lo que el cliente acepta recibir; una "
+"redacción vaga debilita el consentimiento del RGPD. Déjalo en blanco para "
 "usar el valor predeterminado a continuación."
 
 #: src/Admin/Settings.php:176
@@ -197,7 +197,7 @@ msgstr "Estado predeterminado"
 
 #: src/Admin/Settings.php:189
 msgid "Start with the box ticked."
-msgstr "Comience con la casilla marcada."
+msgstr "Comienza con la casilla marcada."
 
 #: src/Admin/Settings.php:192
 msgid ""
@@ -259,7 +259,7 @@ msgid ""
 "Subscribe - Newsletter Opt-In for WooCommerce requires WooCommerce to be "
 "active."
 msgstr ""
-"Suscríbase: la suscripción al boletín informativo para WooCommerce requiere "
+"Suscríbete: la suscripción al boletín informativo para WooCommerce requiere "
 "que WooCommerce esté activo."
 
 #: src/Admin/ProUpsell.php:78
