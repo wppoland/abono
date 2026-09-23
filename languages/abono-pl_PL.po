@@ -20,12 +20,12 @@ msgstr ""
 #. Plugin Name of the plugin
 #: abono.php
 msgid "Plogins Subscribe - Newsletter Signup for WooCommerce"
-msgstr ""
+msgstr "Plogins Subscribe - Zapis do newslettera dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: abono.php
 msgid "https://plogins.com/plogins-subscribe/"
-msgstr ""
+msgstr "https://plogins.com/plogins-subscribe/"
 
 #. Description of the plugin
 #: abono.php
@@ -47,7 +47,7 @@ msgstr "https://wppoland.com"
 
 #: abono.php:48
 msgid "Plogins Subscribe for WooCommerce requires WooCommerce to be active."
-msgstr ""
+msgstr "Plogins Subscribe dla WooCommerce wymaga aktywnego WooCommerce."
 
 #: src/Admin/Export.php:57
 msgid ""
@@ -311,19 +311,19 @@ msgstr "Zamówienie"
 #: src/Service/SubscribePrivacyService.php:47
 #: src/Service/SubscribePrivacyService.php:69
 msgid "Newsletter Subscriptions"
-msgstr ""
+msgstr "Zapisy do newslettera"
 
 #: src/Service/SubscribePrivacyService.php:72
 msgid "Email Address"
-msgstr ""
+msgstr "Adres e-mail"
 
 #: src/Service/SubscribePrivacyService.php:73
 msgid "Opt-in Source"
-msgstr ""
+msgstr "Źródło zapisu"
 
 #: src/Service/SubscribePrivacyService.php:74
 msgid "Consented At"
-msgstr ""
+msgstr "Data zgody"
 
 #~ msgid "Subscribe - Newsletter Opt-In for WooCommerce"
 #~ msgstr "Subscribe - Zapis do newslettera dla WooCommerce"
