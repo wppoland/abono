@@ -13,9 +13,8 @@ namespace Subscribe;
 
 defined('ABSPATH') || exit;
 
-$subscribe_composer = __DIR__ . '/vendor/autoload.php';
-if (is_readable($subscribe_composer)) {
-    require_once $subscribe_composer;
+if (is_readable(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
     return;
 }
 

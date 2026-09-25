@@ -49,6 +49,14 @@ final class Settings implements HasHooks
             [],
             \Subscribe\VERSION,
         );
+
+        wp_enqueue_script(
+            'subscribe-admin',
+            SUBSCRIBE_URL . 'assets/js/admin.js',
+            [],
+            \Subscribe\VERSION,
+            true,
+        );
     }
 
     public function addMenuPage(): void
@@ -178,7 +186,7 @@ final class Settings implements HasHooks
                                         <?php esc_html_e('The consent text shown next to the checkbox. State plainly what the customer agrees to receive, vague wording weakens GDPR consent. Leave blank to use the default below.', 'abono'); ?>
                                     </p>
 
-                                    <div class="subscribe-preview" id="subscribe-preview" aria-hidden="true">
+                                    <div class="subscribe-preview" id="subscribe-preview" data-fallback="<?php echo esc_attr($default_label); ?>" aria-hidden="true">
                                         <span class="subscribe-preview__box"></span>
                                         <span class="subscribe-preview__text" id="subscribe-preview-text"><?php echo esc_html($preview_label); ?></span>
                                     </div>
@@ -210,38 +218,6 @@ final class Settings implements HasHooks
                 <?php submit_button(); ?>
             </form>
 
-            <script>
-            ( function () {
-                var labelInput = document.getElementById( 'subscribe_label' );
-                var defaultBox = document.getElementById( 'subscribe_default' );
-                var preview    = document.getElementById( 'subscribe-preview' );
-                var previewText = document.getElementById( 'subscribe-preview-text' );
-
-                if ( ! preview || ! previewText ) {
-                    return;
-                }
-
-                var fallback = <?php echo wp_json_encode($default_label); ?>;
-
-                function sync() {
-                    if ( labelInput ) {
-                        var value = labelInput.value.trim();
-                        previewText.textContent = value !== '' ? value : fallback;
-                    }
-                    if ( defaultBox ) {
-                        preview.classList.toggle( 'is-checked', defaultBox.checked );
-                    }
-                }
-
-                if ( labelInput ) {
-                    labelInput.addEventListener( 'input', sync );
-                }
-                if ( defaultBox ) {
-                    defaultBox.addEventListener( 'change', sync );
-                }
-                sync();
-            } )();
-            </script>
 
             <?php $this->proUpsell()->cards(); ?>
         </div>

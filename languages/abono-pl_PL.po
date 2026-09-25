@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe - Newsletter Opt-In for WooCommerce 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/abono\n"
-"POT-Creation-Date: 2026-09-11T06:44:35+00:00\n"
+"POT-Creation-Date: 2026-09-25T22:59:14+00:00\n"
 "PO-Revision-Date: 2026-06-15 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -19,7 +19,8 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: abono.php
-msgid "Plogins Subscribe - Newsletter Signup for WooCommerce"
+#, fuzzy
+msgid "Abono - Newsletter Signup for WooCommerce"
 msgstr "Plogins Subscribe - Zapis do newslettera dla WooCommerce"
 
 #. Plugin URI of the plugin
@@ -46,110 +47,112 @@ msgid "https://wppoland.com"
 msgstr "https://wppoland.com"
 
 #: abono.php:48
-msgid "Plogins Subscribe for WooCommerce requires WooCommerce to be active."
+#, fuzzy
+msgid "Abono requires WooCommerce to be active."
 msgstr "Plogins Subscribe dla WooCommerce wymaga aktywnego WooCommerce."
 
-#: src/Admin/Export.php:57
+#: src/Admin/Export.php:62
 msgid ""
 "Export every subscriber (email, consent, source and date) to a CSV file."
 msgstr ""
 "Eksportuj wszystkich subskrybentów (e-mail, zgoda, źródło i data) do pliku "
 "CSV."
 
-#: src/Admin/Export.php:59
+#: src/Admin/Export.php:64
 msgid "Export to CSV"
 msgstr "Eksportuj do CSV"
 
-#: src/Admin/Export.php:72
+#: src/Admin/Export.php:77
 msgid "You are not allowed to export subscribers."
 msgstr "Nie masz uprawnień do eksportowania subskrybentów."
 
-#: src/Admin/Export.php:80
+#: src/Admin/Export.php:85
 msgid "Security check failed. Please try again."
 msgstr "Weryfikacja bezpieczeństwa nie powiodła się. Spróbuj ponownie."
 
-#: src/Admin/Export.php:89 src/PostType/Subscriber.php:218
+#: src/Admin/Export.php:91 src/PostType/Subscriber.php:218
 #: src/PostType/Subscriber.php:289
 msgid "Email"
 msgstr "E-mail"
 
-#: src/Admin/Export.php:90 src/PostType/Subscriber.php:299
+#: src/Admin/Export.php:92 src/PostType/Subscriber.php:299
 msgid "Consent"
 msgstr "Zgoda"
 
-#: src/Admin/Export.php:91 src/PostType/Subscriber.php:223
+#: src/Admin/Export.php:93 src/PostType/Subscriber.php:223
 #: src/PostType/Subscriber.php:309
 msgid "Source"
 msgstr "Źródło"
 
-#: src/Admin/Export.php:92 src/PostType/Subscriber.php:313
+#: src/Admin/Export.php:94 src/PostType/Subscriber.php:313
 msgid "Subscribed at"
 msgstr "Data zapisu"
 
-#: src/Admin/Export.php:170
+#: src/Admin/Export.php:167
 msgid "Yes"
 msgstr "Tak"
 
-#: src/Admin/Export.php:170
+#: src/Admin/Export.php:167
 msgid "No"
 msgstr "Nie"
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Wkrótce"
 msgstr "Wkrótce"
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Wkrótce"
 
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:84
+#: src/Admin/ProUpsell.php:91
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr "od %1$s%2$d/rok"
 
-#: src/Admin/ProUpsell.php:93
+#: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Przejdź na PRO"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Powiadom mnie"
 msgstr "Powiadom mnie"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Get notified"
 msgstr "Powiadom mnie"
 
-#: src/Admin/ProUpsell.php:124
+#: src/Admin/ProUpsell.php:131
 msgid "Permission denied."
 msgstr "Brak uprawnień."
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:154
+#: src/Admin/ProUpsell.php:161
 #, php-format
 msgid "Do more with %s"
 msgstr "Zrób więcej dzięki %s"
 
-#: src/Admin/ProUpsell.php:161
+#: src/Admin/ProUpsell.php:168
 msgid "Dismiss this notice"
 msgstr "Odrzuć to powiadomienie"
 
-#: src/Admin/ProUpsell.php:178
+#: src/Admin/ProUpsell.php:190
 msgid "Unlock every PRO feature"
 msgstr "Odblokuj wszystkie funkcje PRO"
 
-#: src/Admin/ProUpsell.php:191
+#: src/Admin/ProUpsell.php:203
 msgid "one licence, every PRO feature"
 msgstr "jedna licencja, wszystkie funkcje PRO"
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:210
+#: src/Admin/ProUpsell.php:222
 #, php-format
 msgid "What %s adds"
 msgstr "Co dodaje %s"
 
 #: src/Admin/Settings.php:58
-msgid "Subscribe: Newsletter Opt-In"
+#, fuzzy
+msgid "Abono: newsletter opt-in"
 msgstr "Subscribe: Zapis do newslettera"
 
 #: src/Admin/Settings.php:59
@@ -287,7 +290,7 @@ msgstr "Nie znaleziono subskrybentów."
 msgid "No subscribers in Trash."
 msgstr "Brak subskrybentów w koszu."
 
-#: src/PostType/Subscriber.php:224 src/Service/Checkout.php:88
+#: src/PostType/Subscriber.php:224 src/Service/Checkout.php:97
 msgid "Subscribed"
 msgstr "Zapisany"
 
@@ -306,6 +309,10 @@ msgstr "Nie zapisano zgody"
 #: src/PostType/Subscriber.php:371
 msgid "Checkout"
 msgstr "Zamówienie"
+
+#: src/Service/Checkout.php:124
+msgid "This page has expired. Reload it and try again."
+msgstr ""
 
 #: src/Service/SubscribePrivacyService.php:33
 #: src/Service/SubscribePrivacyService.php:47
