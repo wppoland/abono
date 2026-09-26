@@ -18,9 +18,8 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: abono.php
-#, fuzzy
 msgid "Abono - Newsletter Signup for WooCommerce"
-msgstr "Suscríbete - Suscripción al boletín informativo para WooCommerce"
+msgstr "Abono - suscripción al boletín para WooCommerce"
 
 #. Plugin URI of the plugin
 #: abono.php
@@ -43,14 +42,11 @@ msgstr "WPPoland.com"
 #. Author URI of the plugin
 #: abono.php
 msgid "https://wppoland.com"
-msgstr "https://wppoland.com"
+msgstr ""
 
 #: abono.php:48
-#, fuzzy
 msgid "Abono requires WooCommerce to be active."
-msgstr ""
-"Suscríbete: la suscripción al boletín informativo para WooCommerce requiere "
-"que WooCommerce esté activo."
+msgstr "Abono requiere que WooCommerce esté activo."
 
 #: src/Admin/Export.php:62
 msgid ""
@@ -152,9 +148,8 @@ msgid "What %s adds"
 msgstr "Lo que añade %s"
 
 #: src/Admin/Settings.php:58
-#, fuzzy
 msgid "Abono: newsletter opt-in"
-msgstr "Suscríbete: suscripción al boletín"
+msgstr "Abono: suscripción al boletín"
 
 #: src/Admin/Settings.php:59
 msgid "Subscribe"
@@ -338,9 +333,6 @@ msgstr ""
 #: src/Service/SubscribePrivacyService.php:74
 msgid "Consented At"
 msgstr ""
-
-#~ msgid "https://plogins.com/subscribe/"
-#~ msgstr "https://plogins.com/es/subscribe/"
 
 #, php-format
 #~ msgid "od %d zł/rok"

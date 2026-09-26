@@ -19,14 +19,13 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: abono.php
-#, fuzzy
 msgid "Abono - Newsletter Signup for WooCommerce"
-msgstr "Plogins Subscribe - Zapis do newslettera dla WooCommerce"
+msgstr "Abono - zapis do newslettera dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: abono.php
 msgid "https://plogins.com/plogins-subscribe/"
-msgstr "https://plogins.com/plogins-subscribe/"
+msgstr ""
 
 #. Description of the plugin
 #: abono.php
@@ -44,12 +43,11 @@ msgstr "WPPoland.com"
 #. Author URI of the plugin
 #: abono.php
 msgid "https://wppoland.com"
-msgstr "https://wppoland.com"
+msgstr ""
 
 #: abono.php:48
-#, fuzzy
 msgid "Abono requires WooCommerce to be active."
-msgstr "Plogins Subscribe dla WooCommerce wymaga aktywnego WooCommerce."
+msgstr "Abono wymaga aktywnego WooCommerce."
 
 #: src/Admin/Export.php:62
 msgid ""
@@ -151,9 +149,8 @@ msgid "What %s adds"
 msgstr "Co dodaje %s"
 
 #: src/Admin/Settings.php:58
-#, fuzzy
 msgid "Abono: newsletter opt-in"
-msgstr "Subscribe: Zapis do newslettera"
+msgstr "Abono: zgoda na newsletter"
 
 #: src/Admin/Settings.php:59
 msgid "Subscribe"
@@ -312,7 +309,7 @@ msgstr "Zamówienie"
 
 #: src/Service/Checkout.php:124
 msgid "This page has expired. Reload it and try again."
-msgstr ""
+msgstr "Ta strona wygasła. Odśwież ją i spróbuj ponownie."
 
 #: src/Service/SubscribePrivacyService.php:33
 #: src/Service/SubscribePrivacyService.php:47
@@ -335,9 +332,6 @@ msgstr "Data zgody"
 #~ msgid "Subscribe - Newsletter Opt-In for WooCommerce"
 #~ msgstr "Subscribe - Zapis do newslettera dla WooCommerce"
 
-#~ msgid "https://plogins.com/subscribe/"
-#~ msgstr "https://plogins.com/subscribe/"
-
 #~ msgid ""
 #~ "Subscribe - Newsletter Opt-In for WooCommerce requires WooCommerce to be "
 #~ "active."
@@ -351,9 +345,6 @@ msgstr "Data zgody"
 
 #~ msgid "WPPoland"
 #~ msgstr "WPPoland"
-
-#~ msgid "https://plogins.com/"
-#~ msgstr "https://plogins.com/"
 
 #~ msgid "Opt-in"
 #~ msgstr "Zapis"
