@@ -10,12 +10,11 @@
 defined('ABSPATH') || exit;
 
 return [
-    'name'       => 'Subscribe Pro',
+    'name'       => 'Abono Pro',
     'url'        => 'https://plogins.com/plogins-subscribe-pro/pricing/',
     'sellable'   => true,
     'price_from' => 29,
     'currency'   => 'EUR',
-    'price_pln'  => 129,
     'lead'       => [
         'en' => 'Welcome email, double opt-in, custom fields and Mailchimp, Brevo or Klaviyo sync ship in version 0.6.0. Feature-complete PRO.',
         'pl' => 'E-mail powitalny, double opt-in, własne pola i synchronizacja Mailchimp, Brevo lub Klaviyo są wdrożone w wydaniu 0.6.0. Feature-complete PRO.',

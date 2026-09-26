@@ -21,6 +21,11 @@ final class Export implements HasHooks
     private const ACTION = 'subscribe_export';
     private const NONCE  = 'subscribe_export_csv';
 
+    /**
+     * Subscribers whose meta is loaded at once while streaming the file.
+     */
+    private const BATCH = 200;
+
     public function __construct(private readonly Subscriber $subscribers)
     {
     }
@@ -54,9 +59,9 @@ final class Export implements HasHooks
         ?>
         <div class="notice notice-info subscribe-export-notice">
             <p>
-                <?php esc_html_e('Export every subscriber (email, consent, source and date) to a CSV file.', 'plogins-subscribe'); ?>
+                <?php esc_html_e('Export every subscriber (email, consent, source and date) to a CSV file.', 'abono'); ?>
                 <a class="button button-primary" href="<?php echo esc_url($url); ?>">
-                    <?php esc_html_e('Export to CSV', 'plogins-subscribe'); ?>
+                    <?php esc_html_e('Export to CSV', 'abono'); ?>
                 </a>
             </p>
         </div>
@@ -69,7 +74,7 @@ final class Export implements HasHooks
     public function handle(): void
     {
         if (! current_user_can('manage_woocommerce')) {
-            wp_die(esc_html__('You are not allowed to export subscribers.', 'plogins-subscribe'), '', ['response' => 403]);
+            wp_die(esc_html__('You are not allowed to export subscribers.', 'abono'), '', ['response' => 403]);
         }
 
         $nonce = isset($_GET['_subscribe_nonce'])
@@ -77,26 +82,18 @@ final class Export implements HasHooks
             : '';
 
         if (! wp_verify_nonce($nonce, self::NONCE)) {
-            wp_die(esc_html__('Security check failed. Please try again.', 'plogins-subscribe'), '', ['response' => 403]);
+            wp_die(esc_html__('Security check failed. Please try again.', 'abono'), '', ['response' => 403]);
         }
 
-        $rows = $this->rows();
-
-        $lines   = [];
         $headers = apply_filters(
             'subscribe/export_headers',
             [
-                __('Email', 'plogins-subscribe'),
-                __('Consent', 'plogins-subscribe'),
-                __('Source', 'plogins-subscribe'),
-                __('Subscribed at', 'plogins-subscribe'),
+                __('Email', 'abono'),
+                __('Consent', 'abono'),
+                __('Source', 'abono'),
+                __('Subscribed at', 'abono'),
             ],
         );
-        $lines[] = $this->csvLine($headers);
-
-        foreach ($rows as $row) {
-            $lines[] = $this->csvLine($row);
-        }
 
         nocache_headers();
         header('Content-Type: text/csv; charset=utf-8');
@@ -104,7 +101,13 @@ final class Export implements HasHooks
 
         // Output is pre-escaped CSV text; not HTML. Echoing directly avoids the
         // PHP filesystem functions (fopen/fputcsv/fclose) that Plugin Check flags.
-        echo implode("\r\n", $lines) . "\r\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        // Every line goes out as it is read, so the list is never held twice.
+        echo $this->csvLine($headers) . "\r\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+        foreach ($this->rows() as $row) {
+            echo $this->csvLine($row) . "\r\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        }
+
         exit;
     }
 
@@ -136,11 +139,60 @@ final class Export implements HasHooks
     }
 
     /**
-     * Build the CSV data rows from every stored subscriber.
+     * Yield one CSV data row per stored subscriber, a batch at a time.
      *
-     * @return array<int, array{0: string, 1: string, 2: string, 3: string}>
+     * The ID list is read once and frozen, so a subscriber added while the file
+     * downloads cannot push a row into a later batch and have it written twice.
+     * Meta is primed one batch at a time and dropped again afterwards: reading
+     * it row by row costs a query per subscriber and grows the object cache by
+     * one entry per subscriber for the length of the export.
+     *
+     * @return \Generator<int, array<int, string>>
      */
-    private function rows(): array
+    private function rows(): \Generator
+    {
+        foreach (array_chunk($this->ids(), self::BATCH) as $chunk) {
+            update_meta_cache('post', $chunk);
+
+            foreach ($chunk as $id) {
+                $email   = (string) get_post_meta($id, Subscriber::META_EMAIL, true);
+                $consent = (bool) get_post_meta($id, Subscriber::META_CONSENT, true);
+                $source  = (string) get_post_meta($id, Subscriber::META_SOURCE, true);
+                $ts      = absint(get_post_meta($id, Subscriber::META_CONSENTED, true));
+
+                yield apply_filters(
+                    'subscribe/export_row',
+                    [
+                        $email,
+                        $consent ? __('Yes', 'abono') : __('No', 'abono'),
+                        $this->subscribers->sourceLabel($source),
+                        $ts > 0 ? gmdate('Y-m-d H:i:s', $ts) : '',
+                    ],
+                    $id,
+                );
+
+                wp_cache_delete($id, 'post_meta');
+            }
+
+            // Push the batch to the browser instead of letting PHP hold the
+            // whole file in an output buffer, which is the copy this rewrite
+            // set out to remove.
+            if (ob_get_level() > 0) {
+                ob_flush();
+            }
+
+            flush();
+        }
+    }
+
+    /**
+     * Every subscriber ID, newest first. IDs are eight bytes a row; the
+     * subscriber records behind them are not, which is why only the IDs are
+     * read in one go.
+     *
+     * @return list<int>
+     */
+    private function ids(): array
     {
         $ids = get_posts(
             [
@@ -154,27 +206,6 @@ final class Export implements HasHooks
             ],
         );
 
-        $rows = [];
-
-        foreach ($ids as $id) {
-            $id      = (int) $id;
-            $email   = (string) get_post_meta($id, Subscriber::META_EMAIL, true);
-            $consent = (bool) get_post_meta($id, Subscriber::META_CONSENT, true);
-            $source  = (string) get_post_meta($id, Subscriber::META_SOURCE, true);
-            $ts      = absint(get_post_meta($id, Subscriber::META_CONSENTED, true));
-
-            $rows[] = apply_filters(
-                'subscribe/export_row',
-                [
-                    $email,
-                    $consent ? __('Yes', 'plogins-subscribe') : __('No', 'plogins-subscribe'),
-                    $this->subscribers->sourceLabel($source),
-                    $ts > 0 ? gmdate('Y-m-d H:i:s', $ts) : '',
-                ],
-                $id,
-            );
-        }
-
-        return $rows;
+        return array_map('intval', is_array($ids) ? $ids : []);
     }
 }

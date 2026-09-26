@@ -52,7 +52,7 @@ final class Plugin
 
         /**
          * Fires after the plugin has fully booted and all services have
-         * registered their hooks. Add-ons (e.g. Subscribe Pro) listen for this
+         * registered their hooks. Add-ons (e.g. Abono Pro) listen for this
          * to extend the shared DI container and register their own hooks.
          *
          * @param Plugin $plugin The booted plugin instance.

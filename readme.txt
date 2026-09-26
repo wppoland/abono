@@ -1,11 +1,11 @@
-=== Subscribe - Newsletter Signup for WooCommerce ===
+=== Abono - Newsletter Signup for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, newsletter, opt-in, gdpr, checkout
 Requires at least: 6.5
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.5
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Adds a newsletter opt-in checkbox to the WooCommerce checkout and records each s
 
 == Description ==
 
-Subscribe puts a newsletter opt-in checkbox on your WooCommerce checkout. When a
+Abono puts a newsletter opt-in checkbox on your WooCommerce checkout. When a
 customer ticks it and places the order, their email is saved on your own site
 along with the consent flag, where the opt-in came from, and the date. You review
 the list under WooCommerce and export it whenever you need it.
@@ -25,14 +25,14 @@ database and nowhere else.
 
 The plugin is built for the source to be easy to read and fork. If you hit a bug
 or want to suggest a change, the code and issue tracker live at
-https://github.com/wppoland/plogins-subscribe.
+[github.com/wppoland/plogins-subscribe](https://github.com/wppoland/plogins-subscribe).
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-subscribe/docs/
-* **Plugin page** - https://plogins.com/plogins-subscribe/
-* **Source code** - https://github.com/wppoland/plogins-subscribe
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-subscribe/issues
+* **Documentation**: [plogins.com/plogins-subscribe/docs/](https://plogins.com/plogins-subscribe/docs/)
+* **Plugin page**: [plogins.com/plogins-subscribe/](https://plogins.com/plogins-subscribe/)
+* **Source code**: [github.com/wppoland/plogins-subscribe](https://github.com/wppoland/plogins-subscribe)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-subscribe/issues](https://github.com/wppoland/plogins-subscribe/issues)
 
 
 = What it does =
@@ -49,7 +49,7 @@ https://github.com/wppoland/plogins-subscribe.
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/subscribe`, or install it from Plugins > Add New.
+1. Upload the plugin to `/wp-content/plugins/abono`, or install it from Plugins > Add New.
 2. Activate it. WooCommerce must be installed and active first.
 3. Open WooCommerce > Subscribe to turn the opt-in on, set the checkbox label, and choose whether it starts ticked.
 4. Find the people who opted in under WooCommerce > Subscribers, and use the Export to CSV button there to download them.
@@ -88,13 +88,46 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 == External Services ==
 
-Subscribe connects to no external services. The opt-in checkbox, the consent records and the CSV export all run on your own site, and no email addresses or order data are sent anywhere off it. Each subscriber is stored in your WordPress database as a private "subscribe_subscriber" custom post type record holding the email, consent flag, source and signup timestamp; its settings live in the "subscribe_settings" option. The plugin does not send email and is not tied to Mailchimp or any other mailing platform, so what you do with the exported list is entirely up to you.
+Abono connects to no external services. The opt-in checkbox, the consent records and the CSV export all run on your own site, and no email addresses or order data are sent anywhere off it. Each subscriber is stored in your WordPress database as a private "subscribe_subscriber" custom post type record holding the email, consent flag, source and signup timestamp; its settings live in the "subscribe_settings" option. The plugin does not send email and is not tied to Mailchimp or any other mailing platform, so what you do with the exported list is entirely up to you.
 
 == Translations ==
 
-Plogins Subscribe includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-subscribe`, so WordPress.org language packs can also override or extend these bundled translations.
+Abono is fully translatable and ships the `abono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.2 =
+* The checkout opt-in now carries its own security token, and the box is only read when that token checks out. An expired checkout page asks the shopper to reload instead of recording the opt-in.
+* The live preview on the settings screen loads as an enqueued script instead of an inline one.
+
+= 1.1.1 =
+* The sidebar upgrade promo now follows the same dismissal as the banner. Dismissing the banner used to leave a full-height advert on the settings screen for good, which is not what the WordPress.org guideline on upgrade prompts means by used with moderation.
+
+= 1.1.0 =
+* Renamed to Abono. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Abono is Esperanto for a subscription. The text domain follows the name; the stored subscribers, the consent records, the settings and every hook are unchanged.
+
+= 1.0.12 =
+* Fixed: the CSV export built the whole file in memory before sending a byte of it. The subscriber list was read into one array, turned into a second array of finished lines and then joined into a single string, so a shop with 20,000 subscribers held 13.6 MB of PHP memory for a 1.35 MB file, and a longer list met the memory limit as a blank page with no download. Rows are now written out as they are read, which holds 842 KB for the same list, most of that the ID list the export reads in one go on purpose. The file is byte for byte the one the old code produced.
+* Fixed: the export read each subscriber's consent record one at a time, one database query per subscriber. It now loads them 200 at a time and drops each batch again afterwards, so the same 20,000 subscribers took 100 reads instead of 20,000 and the object cache no longer grows by an entry per subscriber for the length of the download.
+
+= 1.0.11 =
+* Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
+* Fixed: a custom subscriber field whose key contained a hyphen was silently discarded. The field appeared at checkout and could even be required, so the customer had to fill it in, and the value was then thrown away with no error: the subscriber record and the CSV export were empty for that column forever. Keys with only letters, digits and underscores were unaffected, which made the loss look random.
+
+= 1.0.10 =
+* Fixed: deleting the plugin left the per-user "dismiss" flag from the PRO notice in the database. Uninstall now removes it for every user, not just the one who dismissed it.
+
+= 1.0.9 =
+* The translation template was regenerated. It still named an older version of the plugin and pointed at source lines that had since moved, which is what translation tools read to show a string in context.
+
+= 1.0.8 =
+* Renamed to Plogins Subscribe - Newsletter Signup for WooCommerce so the name leads with the brand rather than a generic word, which is what the WordPress.org plugin review team asks for. The plugin slug is unchanged.
+
+= 1.0.7 =
+* Tested against WordPress 7.1. Verified by activating this build on a clean 7.1 install with WooCommerce 11.1, not by editing the header.
+
+= 1.0.6 =
+* Fixed the PRO promo on the settings screen quoting a price in PLN. PRO is priced and charged in EUR, so an admin on a Polish site was shown a zloty amount and then billed in euro, and the zloty figure was a fixed conversion that drifted from the real charge as the rate moved. The promo now shows the euro price that is actually taken.
 
 = 1.0.4 =
 * Translations: completed Polish, German and Spanish for the PRO upgrade panel.

@@ -54,15 +54,15 @@ final class Subscriber implements HasHooks
             self::POST_TYPE,
             [
                 'labels'              => [
-                    'name'               => __('Subscribers', 'plogins-subscribe'),
-                    'singular_name'      => __('Subscriber', 'plogins-subscribe'),
-                    'menu_name'          => __('Subscribers', 'plogins-subscribe'),
-                    'all_items'          => __('Subscribers', 'plogins-subscribe'),
-                    'edit_item'          => __('View Subscriber', 'plogins-subscribe'),
-                    'view_item'          => __('View Subscriber', 'plogins-subscribe'),
-                    'search_items'       => __('Search subscribers', 'plogins-subscribe'),
-                    'not_found'          => __('No subscribers found.', 'plogins-subscribe'),
-                    'not_found_in_trash' => __('No subscribers in Trash.', 'plogins-subscribe'),
+                    'name'               => __('Subscribers', 'abono'),
+                    'singular_name'      => __('Subscriber', 'abono'),
+                    'menu_name'          => __('Subscribers', 'abono'),
+                    'all_items'          => __('Subscribers', 'abono'),
+                    'edit_item'          => __('View Subscriber', 'abono'),
+                    'view_item'          => __('View Subscriber', 'abono'),
+                    'search_items'       => __('Search subscribers', 'abono'),
+                    'not_found'          => __('No subscribers found.', 'abono'),
+                    'not_found_in_trash' => __('No subscribers in Trash.', 'abono'),
                 ],
                 'public'              => false,
                 'show_ui'             => true,
@@ -175,8 +175,9 @@ final class Subscriber implements HasHooks
         /**
          * Filters extra post meta stored on a new subscriber.
          *
-         * Keys must start with `_subscribe_field_` or `_subscribe_pro_`. Values are
-         * stored as sanitised text fields on the subscriber post.
+         * Keys must start with `_subscribe_field_` or `_subscribe_pro_`, and the
+         * rest must be sanitize_key() safe (a-z, 0-9, underscore, hyphen).
+         * Values are stored as sanitised text fields on the subscriber post.
          *
          * @param array<string, string> $meta   Extra meta key => value pairs.
          * @param string                $email  The subscriber's sanitised email address.
@@ -192,7 +193,7 @@ final class Subscriber implements HasHooks
          *
          * Only fires for genuinely new subscribers, the email de-duplication
          * above guarantees this never fires for an existing subscriber. Add-ons
-         * (e.g. Subscribe Pro's welcome email) hook this to react to new opt-ins.
+         * (e.g. Abono Pro's welcome email) hook this to react to new opt-ins.
          *
          * @param int    $postId The new subscriber post ID.
          * @param string $email  The subscriber's sanitised email address.
@@ -214,13 +215,13 @@ final class Subscriber implements HasHooks
 
         foreach ($columns as $key => $label) {
             if ('title' === $key) {
-                $reordered['subscribe_email'] = __('Email', 'plogins-subscribe');
+                $reordered['subscribe_email'] = __('Email', 'abono');
                 continue;
             }
 
             if ('date' === $key) {
-                $reordered['subscribe_source']   = __('Source', 'plogins-subscribe');
-                $reordered['subscribe_consented'] = __('Subscribed', 'plogins-subscribe');
+                $reordered['subscribe_source']   = __('Source', 'abono');
+                $reordered['subscribe_consented'] = __('Subscribed', 'abono');
             }
 
             $reordered[$key] = $label;
@@ -267,7 +268,7 @@ final class Subscriber implements HasHooks
     {
         add_meta_box(
             'subscribe_subscriber_details',
-            __('Subscriber details', 'plogins-subscribe'),
+            __('Subscriber details', 'abono'),
             [$this, 'renderMetaBox'],
             self::POST_TYPE,
             'normal',
@@ -285,7 +286,7 @@ final class Subscriber implements HasHooks
         <table class="widefat striped">
             <tbody>
                 <tr>
-                    <th scope="row" style="width:180px"><?php esc_html_e('Email', 'plogins-subscribe'); ?></th>
+                    <th scope="row" style="width:180px"><?php esc_html_e('Email', 'abono'); ?></th>
                     <td>
                         <?php if ('' !== $email) : ?>
                             <a href="<?php echo esc_url('mailto:' . $email); ?>"><?php echo esc_html($email); ?></a>
@@ -295,21 +296,21 @@ final class Subscriber implements HasHooks
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><?php esc_html_e('Consent', 'plogins-subscribe'); ?></th>
+                    <th scope="row"><?php esc_html_e('Consent', 'abono'); ?></th>
                     <td>
                         <?php
                         echo $consent
-                            ? esc_html__('Explicit opt-in recorded', 'plogins-subscribe')
-                            : esc_html__('No consent recorded', 'plogins-subscribe');
+                            ? esc_html__('Explicit opt-in recorded', 'abono')
+                            : esc_html__('No consent recorded', 'abono');
                         ?>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><?php esc_html_e('Source', 'plogins-subscribe'); ?></th>
+                    <th scope="row"><?php esc_html_e('Source', 'abono'); ?></th>
                     <td><?php echo esc_html($this->sourceLabel($source)); ?></td>
                 </tr>
                 <tr>
-                    <th scope="row"><?php esc_html_e('Subscribed at', 'plogins-subscribe'); ?></th>
+                    <th scope="row"><?php esc_html_e('Subscribed at', 'abono'); ?></th>
                     <td>
                         <?php
                         echo esc_html(
@@ -332,7 +333,13 @@ final class Subscriber implements HasHooks
     {
         foreach ($meta as $key => $value) {
             $key = (string) $key;
-            if (! preg_match('/^_(subscribe_field_|subscribe_pro_)[a-z0-9_]+$/', $key)) {
+            // The hyphen is not optional here. The documented contract above is
+            // the PREFIX, and the only producer of these keys builds them with
+            // sanitize_key(), which allows a-z, 0-9, underscore AND hyphen. A
+            // custom field keyed `vat-id` therefore rendered at checkout, was
+            // enforced as required, and was then dropped on the floor by this
+            // allowlist, with nothing written and no error anywhere.
+            if (! preg_match('/^_(subscribe_field_|subscribe_pro_)[a-z0-9_-]+$/', $key)) {
                 continue;
             }
 
@@ -361,7 +368,7 @@ final class Subscriber implements HasHooks
     {
         switch ($source) {
             case self::SOURCE_CHECKOUT:
-                return __('Checkout', 'plogins-subscribe');
+                return __('Checkout', 'abono');
             case '':
                 return '-';
             default:

@@ -22,10 +22,12 @@ return is_admin()
     ? [
         Subscriber::class,
         Checkout::class,
+        \Subscribe\Service\SubscribePrivacyService::class,
         Settings::class,
         Export::class,
     ]
     : [
         Subscriber::class,
         Checkout::class,
+        \Subscribe\Service\SubscribePrivacyService::class,
     ];

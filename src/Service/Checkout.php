@@ -21,6 +21,13 @@ final class Checkout implements HasHooks
 {
     private const FIELD = 'subscribe_optin';
 
+    private const NONCE_FIELD = 'subscribe_optin_nonce';
+
+    private const NONCE_ACTION = 'subscribe_optin';
+
+    /** Whether the verified submission ticked the box; set before the order exists. */
+    private bool $optedIn = false;
+
     public function __construct(
         private readonly SettingsStore $settings,
         private readonly Subscriber $subscribers,
@@ -36,8 +43,10 @@ final class Checkout implements HasHooks
         add_action('wp_enqueue_scripts', [$this, 'enqueueAssets']);
         add_action('woocommerce_checkout_after_terms_and_conditions', [$this, 'renderCheckbox']);
 
-        // Persist the opt-in once the order is created. order_processed runs after
-        // a successful checkout and gives us the posted fields safely.
+        // Read the box while the shopper is still the one the nonce was made for
+        // (checkout may log in a newly created account before the order exists),
+        // then persist the opt-in once the order is created.
+        add_action('woocommerce_checkout_process', [$this, 'readOptIn']);
         add_action('woocommerce_checkout_order_processed', [$this, 'capture'], 10, 2);
     }
 
@@ -85,33 +94,52 @@ final class Checkout implements HasHooks
                     <?php checked($checked, true); ?>
                 />
                 <span class="subscribe-optin__text"><?php echo esc_html($this->settings->label()); ?></span>
-                <span class="subscribe-optin__mark" aria-hidden="true"><?php echo esc_html__('Subscribed', 'plogins-subscribe'); ?></span>
+                <span class="subscribe-optin__mark" aria-hidden="true"><?php echo esc_html__('Subscribed', 'abono'); ?></span>
             </label>
         </p>
         <?php
+        wp_nonce_field(self::NONCE_ACTION, self::NONCE_FIELD, false);
+
         /**
          * Fires after the checkout opt-in checkbox markup.
          *
-         * Add-ons (e.g. Subscribe Pro custom fields) may output extra inputs here.
+         * Add-ons (e.g. Abono Pro custom fields) may output extra inputs here.
          */
         do_action('subscribe/checkout_after_optin');
     }
 
     /**
+     * Read the opt-in from the checkout submission, only when our own nonce
+     * verifies. A present but invalid nonce stops the checkout with a notice.
+     */
+    public function readOptIn(): void
+    {
+        $this->optedIn = false;
+
+        if (! isset($_POST[self::NONCE_FIELD])) {
+            return;
+        }
+
+        if (! wp_verify_nonce(sanitize_text_field(wp_unslash($_POST[self::NONCE_FIELD])), self::NONCE_ACTION)) {
+            wc_add_notice(__('This page has expired. Reload it and try again.', 'abono'), 'error');
+
+            return;
+        }
+
+        $this->optedIn = isset($_POST[self::FIELD])
+            && '1' === sanitize_text_field(wp_unslash($_POST[self::FIELD]));
+    }
+
+    /**
      * Record the subscriber when the box was ticked.
      *
-     * @param mixed $order Order object passed by WooCommerce (unused; we read POST).
+     * @param mixed $order Order object passed by WooCommerce (unused).
      */
     public function capture(int $orderId, mixed $order = null): void
     {
         unset($order);
 
-        // Nonce: WooCommerce verifies the checkout nonce itself before this fires.
-        // We only read our own checkbox from the already-validated submission.
-        $optedIn = isset($_POST[self::FIELD]) // phpcs:ignore WordPress.Security.NonceVerification.Missing
-            && '1' === sanitize_text_field(wp_unslash($_POST[self::FIELD])); // phpcs:ignore WordPress.Security.NonceVerification.Missing
-
-        if (! $optedIn) {
+        if (! $this->optedIn) {
             return;
         }
 
@@ -130,24 +158,18 @@ final class Checkout implements HasHooks
     }
 
     /**
-     * Resolve the customer's email from the order, falling back to the posted
-     * billing email if the order object is unavailable.
+     * Resolve the customer's billing email from the order.
      */
     private function orderEmail(int $orderId): string
     {
         $order = function_exists('wc_get_order') ? wc_get_order($orderId) : null;
 
-        if ($order instanceof \WC_Order) {
-            $email = sanitize_email((string) $order->get_billing_email());
-            if ('' !== $email && is_email($email)) {
-                return $email;
-            }
+        if (! $order instanceof \WC_Order) {
+            return '';
         }
 
-        $posted = isset($_POST['billing_email']) // phpcs:ignore WordPress.Security.NonceVerification.Missing
-            ? sanitize_email(wp_unslash($_POST['billing_email'])) // phpcs:ignore WordPress.Security.NonceVerification.Missing
-            : '';
+        $email = sanitize_email((string) $order->get_billing_email());
 
-        return is_email($posted) ? $posted : '';
+        return is_email($email) ? $email : '';
     }
 }
