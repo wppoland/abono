@@ -162,3 +162,8 @@ Abono is fully translatable and ships the `abono.pot` template. Translations are
 
 = 0.1.0 =
 * First release: checkout opt-in checkbox, private subscriber records storing consent, source and date, and CSV export.
+
+== Upgrade Notice ==
+
+= 1.1.4 =
+Security release. Users with the Editor role could open the subscriber list and read subscribers' email addresses by direct link. Only shop managers and administrators can now. Update, nothing else to do.
