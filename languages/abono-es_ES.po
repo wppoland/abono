@@ -52,8 +52,8 @@ msgstr "Abono requiere que WooCommerce esté activo."
 msgid ""
 "Export every subscriber (email, consent, source and date) to a CSV file."
 msgstr ""
-"Exporta cada suscriptor (correo electrónico, consentimiento, fuente y fecha) "
-"a un archivo CSV."
+"Exporta cada suscriptor (correo electrónico, consentimiento, fuente y fecha)"
+" a un archivo CSV."
 
 #: src/Admin/Export.php:64
 msgid "Export to CSV"
@@ -157,10 +157,10 @@ msgid ""
 "and collect subscribers with explicit consent. Every opt-in is stored "
 "privately with its source and timestamp, ready to review and export."
 msgstr ""
-"Añade una opción de suscripción al boletín informativo acorde con el RGPD al "
-"finalizar tu compra (desmarcada de forma predeterminada) y recopila "
-"suscriptores con su consentimiento explícito. Cada suscripción se almacena de"
-" forma privada con su fuente y marca de tiempo, lista para revisar y "
+"Añade una opción de suscripción al boletín informativo acorde con el RGPD al"
+" finalizar tu compra (desmarcada de forma predeterminada) y recopila "
+"suscriptores con su consentimiento explícito. Cada suscripción se almacena "
+"de forma privada con su fuente y marca de tiempo, lista para revisar y "
 "exportar."
 
 #: src/Admin/Settings.php:112 src/Service/SettingsStore.php:62
@@ -185,12 +185,12 @@ msgstr "Mostrar la suscripción al boletín informativo a los clientes."
 
 #: src/Admin/Settings.php:142
 msgid ""
-"The master switch. When off, nothing renders anywhere and no new subscribers "
-"are collected, existing records stay intact."
+"The master switch. When off, nothing renders anywhere and no new subscribers"
+" are collected, existing records stay intact."
 msgstr ""
 "El interruptor maestro. Cuando está desactivado, no se muestra nada en "
-"ninguna parte y no se recopilan nuevos suscriptores; los registros existentes"
-" permanecen intactos."
+"ninguna parte y no se recopilan nuevos suscriptores; los registros "
+"existentes permanecen intactos."
 
 #: src/Admin/Settings.php:148
 msgid "Checkout checkbox"
@@ -203,14 +203,14 @@ msgstr ""
 
 #: src/Admin/Settings.php:158
 msgid ""
-"Places the checkbox in the order form so customers can subscribe as they buy,"
-" the highest-intent moment. The source is recorded as “checkout”. Turn off to"
-" keep the opt-in for other placements only."
+"Places the checkbox in the order form so customers can subscribe as they "
+"buy, the highest-intent moment. The source is recorded as “checkout”. Turn "
+"off to keep the opt-in for other placements only."
 msgstr ""
 "Coloca la casilla de verificación en el formulario de pedido para que los "
-"clientes puedan suscribirse mientras compran, el momento de mayor intención. "
-"La fuente se registra como \"pago\". Desactívalo para mantener la suscripción"
-" solo para otras ubicaciones."
+"clientes puedan suscribirse mientras compran, el momento de mayor intención."
+" La fuente se registra como \"pago\". Desactívalo para mantener la "
+"suscripción solo para otras ubicaciones."
 
 #: src/Admin/Settings.php:169
 msgid "Consent &amp; wording"
@@ -226,14 +226,14 @@ msgstr "Etiqueta del checkbox"
 
 #: src/Admin/Settings.php:186
 msgid ""
-"The consent text shown next to the checkbox. State plainly what the customer "
-"agrees to receive, vague wording weakens GDPR consent. Leave blank to use the"
-" default below."
+"The consent text shown next to the checkbox. State plainly what the customer"
+" agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
+"the default below."
 msgstr ""
-"El texto de consentimiento que se muestra junto a la casilla de verificación."
-" Indica claramente lo que el cliente acepta recibir; una redacción vaga "
-"debilita el consentimiento del RGPD. Déjalo en blanco para usar el valor "
-"predeterminado a continuación."
+"El texto de consentimiento que se muestra junto a la casilla de "
+"verificación. Indica claramente lo que el cliente acepta recibir; una "
+"redacción vaga debilita el consentimiento del RGPD. Déjalo en blanco para "
+"usar el valor predeterminado a continuación."
 
 #: src/Admin/Settings.php:194
 msgid "Live preview, how the opt-in row looks at checkout."
@@ -252,12 +252,12 @@ msgstr "Comienza con la casilla marcada."
 #: src/Admin/Settings.php:210
 msgid ""
 "Leave off (recommended): the customer opts in deliberately, which is what "
-"GDPR requires. Ticking it pre-selects consent and may make it invalid in the "
-"EU/UK."
+"GDPR requires. Ticking it pre-selects consent and may make it invalid in the"
+" EU/UK."
 msgstr ""
 "Dejar fuera (recomendado): el cliente opta por participar deliberadamente, "
-"que es lo que exige el RGPD. Marcarlo preselecciona el consentimiento y puede"
-" invalidarlo en la UE/Reino Unido."
+"que es lo que exige el RGPD. Marcarlo preselecciona el consentimiento y "
+"puede invalidarlo en la UE/Reino Unido."
 
 #: src/PostType/Subscriber.php:57 src/PostType/Subscriber.php:59
 #: src/PostType/Subscriber.php:60
@@ -324,7 +324,7 @@ msgstr "Origen de la suscripción"
 
 #: src/Service/SubscribePrivacyService.php:74
 msgid "Consented At"
-msgstr "Consentimiento el"
+msgstr "Fecha de consentimiento"
 
 #~ msgid "Wkrótce"
 #~ msgstr "Próximamente"
