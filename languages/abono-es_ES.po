@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe - Newsletter Opt-In for WooCommerce 0.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/abono\n"
-"POT-Creation-Date: 2026-09-25T22:59:14+00:00\n"
+"POT-Creation-Date: 2026-10-05T11:15:20+00:00\n"
 "PO-Revision-Date: 2026-06-18T15:53:02+00:00\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -24,7 +24,7 @@ msgstr "Abono - suscripción al boletín para WooCommerce"
 #. Plugin URI of the plugin
 #: abono.php
 msgid "https://plogins.com/plogins-subscribe/"
-msgstr ""
+msgstr "https://plogins.com/plogins-subscribe/"
 
 #. Description of the plugin
 #: abono.php
@@ -42,7 +42,7 @@ msgstr "WPPoland.com"
 #. Author URI of the plugin
 #: abono.php
 msgid "https://wppoland.com"
-msgstr ""
+msgstr "https://wppoland.com"
 
 #: abono.php:48
 msgid "Abono requires WooCommerce to be active."
@@ -94,10 +94,6 @@ msgid "No"
 msgstr "No"
 
 #: src/Admin/ProUpsell.php:85
-msgid "Wkrótce"
-msgstr "Próximamente"
-
-#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Próximamente"
 
@@ -110,10 +106,6 @@ msgstr "desde %1$s%2$d/año"
 #: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Mejora a PRO"
-
-#: src/Admin/ProUpsell.php:101
-msgid "Powiadom mnie"
-msgstr "Avísame"
 
 #: src/Admin/ProUpsell.php:101
 msgid "Get notified"
@@ -147,19 +139,19 @@ msgstr "una licencia, todas las funciones PRO"
 msgid "What %s adds"
 msgstr "Lo que añade %s"
 
-#: src/Admin/Settings.php:58
+#: src/Admin/Settings.php:66
 msgid "Abono: newsletter opt-in"
 msgstr "Abono: suscripción al boletín"
 
-#: src/Admin/Settings.php:59
+#: src/Admin/Settings.php:67
 msgid "Subscribe"
 msgstr "Suscríbete"
 
-#: src/Admin/Settings.php:97
+#: src/Admin/Settings.php:105
 msgid "Grow your newsletter from checkout"
 msgstr "Haz crecer tu boletín desde el pago"
 
-#: src/Admin/Settings.php:99
+#: src/Admin/Settings.php:107
 msgid ""
 "Add a GDPR-minded newsletter opt-in to your checkout (unchecked by default) "
 "and collect subscribers with explicit consent. Every opt-in is stored "
@@ -167,105 +159,105 @@ msgid ""
 msgstr ""
 "Añade una opción de suscripción al boletín informativo acorde con el RGPD al "
 "finalizar tu compra (desmarcada de forma predeterminada) y recopila "
-"suscriptores con su consentimiento explícito. Cada suscripción se almacena "
-"de forma privada con su fuente y marca de tiempo, lista para revisar y "
+"suscriptores con su consentimiento explícito. Cada suscripción se almacena de"
+" forma privada con su fuente y marca de tiempo, lista para revisar y "
 "exportar."
 
-#: src/Admin/Settings.php:104 src/Service/SettingsStore.php:62
+#: src/Admin/Settings.php:112 src/Service/SettingsStore.php:62
 msgid "Yes, sign me up for the newsletter."
 msgstr "Sí, suscríbeme al boletín."
 
-#: src/Admin/Settings.php:115
+#: src/Admin/Settings.php:123
 msgid "Where it appears"
 msgstr "donde aparece"
 
-#: src/Admin/Settings.php:117
+#: src/Admin/Settings.php:125
 msgid "Turn the opt-in on and choose where customers see it."
 msgstr "Activa la suscripción y elige dónde lo ven los clientes."
 
-#: src/Admin/Settings.php:124
+#: src/Admin/Settings.php:132
 msgid "Enable opt-in"
 msgstr "Habilitar suscripción"
 
-#: src/Admin/Settings.php:131
+#: src/Admin/Settings.php:139
 msgid "Show the newsletter opt-in to customers."
 msgstr "Mostrar la suscripción al boletín informativo a los clientes."
 
-#: src/Admin/Settings.php:134
+#: src/Admin/Settings.php:142
 msgid ""
 "The master switch. When off, nothing renders anywhere and no new subscribers "
 "are collected, existing records stay intact."
 msgstr ""
 "El interruptor maestro. Cuando está desactivado, no se muestra nada en "
-"ninguna parte y no se recopilan nuevos suscriptores; los registros "
-"existentes permanecen intactos."
+"ninguna parte y no se recopilan nuevos suscriptores; los registros existentes"
+" permanecen intactos."
 
-#: src/Admin/Settings.php:140
+#: src/Admin/Settings.php:148
 msgid "Checkout checkbox"
 msgstr "Casilla de verificación"
 
-#: src/Admin/Settings.php:147
+#: src/Admin/Settings.php:155
 msgid "Add the opt-in checkbox at checkout."
 msgstr ""
 "Añade la casilla de verificación de suscripción al finalizar la compra."
 
-#: src/Admin/Settings.php:150
+#: src/Admin/Settings.php:158
 msgid ""
-"Places the checkbox in the order form so customers can subscribe as they "
-"buy, the highest-intent moment. The source is recorded as “checkout”. Turn "
-"off to keep the opt-in for other placements only."
+"Places the checkbox in the order form so customers can subscribe as they buy,"
+" the highest-intent moment. The source is recorded as “checkout”. Turn off to"
+" keep the opt-in for other placements only."
 msgstr ""
 "Coloca la casilla de verificación en el formulario de pedido para que los "
 "clientes puedan suscribirse mientras compran, el momento de mayor intención. "
-"La fuente se registra como \"pago\". Desactívalo para mantener la "
-"suscripción solo para otras ubicaciones."
+"La fuente se registra como \"pago\". Desactívalo para mantener la suscripción"
+" solo para otras ubicaciones."
 
-#: src/Admin/Settings.php:161
+#: src/Admin/Settings.php:169
 msgid "Consent &amp; wording"
 msgstr "Consentimiento y redacción"
 
-#: src/Admin/Settings.php:163
+#: src/Admin/Settings.php:171
 msgid "Word the consent and decide whether the box starts ticked."
 msgstr "Redacta el consentimiento y decide si la casilla comienza marcada."
 
-#: src/Admin/Settings.php:170
+#: src/Admin/Settings.php:178
 msgid "Checkbox label"
 msgstr "Etiqueta del checkbox"
 
-#: src/Admin/Settings.php:178
+#: src/Admin/Settings.php:186
 msgid ""
 "The consent text shown next to the checkbox. State plainly what the customer "
-"agrees to receive, vague wording weakens GDPR consent. Leave blank to use "
-"the default below."
+"agrees to receive, vague wording weakens GDPR consent. Leave blank to use the"
+" default below."
 msgstr ""
-"El texto de consentimiento que se muestra junto a la casilla de "
-"verificación. Indica claramente lo que el cliente acepta recibir; una "
-"redacción vaga debilita el consentimiento del RGPD. Déjalo en blanco para "
-"usar el valor predeterminado a continuación."
+"El texto de consentimiento que se muestra junto a la casilla de verificación."
+" Indica claramente lo que el cliente acepta recibir; una redacción vaga "
+"debilita el consentimiento del RGPD. Déjalo en blanco para usar el valor "
+"predeterminado a continuación."
 
-#: src/Admin/Settings.php:186
+#: src/Admin/Settings.php:194
 msgid "Live preview, how the opt-in row looks at checkout."
 msgstr ""
 "Vista previa en vivo, cómo se ve la fila de suscripción al finalizar la "
 "compra."
 
-#: src/Admin/Settings.php:192
+#: src/Admin/Settings.php:200
 msgid "Default state"
 msgstr "Estado predeterminado"
 
-#: src/Admin/Settings.php:199
+#: src/Admin/Settings.php:207
 msgid "Start with the box ticked."
 msgstr "Comienza con la casilla marcada."
 
-#: src/Admin/Settings.php:202
+#: src/Admin/Settings.php:210
 msgid ""
 "Leave off (recommended): the customer opts in deliberately, which is what "
 "GDPR requires. Ticking it pre-selects consent and may make it invalid in the "
 "EU/UK."
 msgstr ""
 "Dejar fuera (recomendado): el cliente opta por participar deliberadamente, "
-"que es lo que exige el RGPD. Marcarlo preselecciona el consentimiento y "
-"puede invalidarlo en la UE/Reino Unido."
+"que es lo que exige el RGPD. Marcarlo preselecciona el consentimiento y puede"
+" invalidarlo en la UE/Reino Unido."
 
 #: src/PostType/Subscriber.php:57 src/PostType/Subscriber.php:59
 #: src/PostType/Subscriber.php:60
@@ -314,25 +306,31 @@ msgstr "Pago"
 
 #: src/Service/Checkout.php:124
 msgid "This page has expired. Reload it and try again."
-msgstr ""
+msgstr "Esta página ha caducado. Recárgala e inténtalo de nuevo."
 
 #: src/Service/SubscribePrivacyService.php:33
 #: src/Service/SubscribePrivacyService.php:47
 #: src/Service/SubscribePrivacyService.php:69
 msgid "Newsletter Subscriptions"
-msgstr ""
+msgstr "Suscripciones al boletín"
 
 #: src/Service/SubscribePrivacyService.php:72
 msgid "Email Address"
-msgstr ""
+msgstr "Dirección de correo electrónico"
 
 #: src/Service/SubscribePrivacyService.php:73
 msgid "Opt-in Source"
-msgstr ""
+msgstr "Origen de la suscripción"
 
 #: src/Service/SubscribePrivacyService.php:74
 msgid "Consented At"
-msgstr ""
+msgstr "Consentimiento el"
+
+#~ msgid "Wkrótce"
+#~ msgstr "Próximamente"
+
+#~ msgid "Powiadom mnie"
+#~ msgstr "Avísame"
 
 #, php-format
 #~ msgid "od %d zł/rok"
