@@ -47,6 +47,33 @@ or want to suggest a change, the code and issue tracker live at
 * Ships a translation template (.pot) and removes its data on uninstall.
 * Declares HPOS compatibility and works with WooCommerce 8.0 and up.
 
+== Abono Pro ==
+
+Abono Pro is a separate paid plugin that extends Abono.
+
+Included in Abono:
+
+* Checkout checkbox
+* CSV-injection-safe export
+* Explicit GDPR consent
+* Private subscriber records
+* CSV export
+
+Abono Pro adds:
+
+* Automatic welcome email
+* Double opt-in confirmation
+* Custom fields and tags
+* Mailchimp provider sync
+* Brevo provider sync
+* Klaviyo provider sync
+
+The free edition is not a trial and its features stay available without a time limit.
+
+* **Abono Pro** - [plogins.com/plogins-subscribe-pro/](https://plogins.com/plogins-subscribe-pro/)
+* **Compare editions and pricing** - [plogins.com/plogins-subscribe-pro/pricing/](https://plogins.com/plogins-subscribe-pro/pricing/)
+* **PRO documentation** - [plogins.com/plogins-subscribe-pro/docs/](https://plogins.com/plogins-subscribe-pro/docs/)
+
 == Installation ==
 
 1. Upload the plugin to `/wp-content/plugins/abono`, or install it from Plugins > Add New.
