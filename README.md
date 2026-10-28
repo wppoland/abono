@@ -4,4 +4,4 @@
 - **Documentation:** https://plogins.com/subscribe/docs/
 - **Author:** [WPPoland.com](https://wppoland.com)
 - **WordPress.org contributor:** motylanogha
-- **Source:** https://github.com/wppoland/subscribe
+- **Source:** https://github.com/wppoland/abono
