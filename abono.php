@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:       Abono - Newsletter Signup for WooCommerce
- * Plugin URI:        https://plogins.com/plogins-subscribe/
+ * Plugin URI:        https://plogins.com/abono/
  * Description:        Add a newsletter opt-in at checkout and collect subscribers with consent.
- * Version:           1.1.4
+ * Version:           1.1.5
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -25,7 +25,7 @@ namespace Subscribe;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '1.1.4';
+const VERSION     = '1.1.5';
 const PLUGIN_FILE = __FILE__;
 
 define('SUBSCRIBE_DIR', plugin_dir_path(__FILE__));

@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,14 +25,14 @@ database and nowhere else.
 
 The plugin is built for the source to be easy to read and fork. If you hit a bug
 or want to suggest a change, the code and issue tracker live at
-[github.com/wppoland/plogins-subscribe](https://github.com/wppoland/plogins-subscribe).
+[github.com/wppoland/abono](https://github.com/wppoland/abono).
 
 = Documentation and links =
 
-* **Documentation**: [plogins.com/plogins-subscribe/docs/](https://plogins.com/plogins-subscribe/docs/)
-* **Plugin page**: [plogins.com/plogins-subscribe/](https://plogins.com/plogins-subscribe/)
-* **Source code**: [github.com/wppoland/plogins-subscribe](https://github.com/wppoland/plogins-subscribe)
-* **Bug reports and feature requests**: [github.com/wppoland/plogins-subscribe/issues](https://github.com/wppoland/plogins-subscribe/issues)
+* **Documentation**: [plogins.com/abono/docs/](https://plogins.com/abono/docs/)
+* **Plugin page**: [plogins.com/abono/](https://plogins.com/abono/)
+* **Source code**: [github.com/wppoland/abono](https://github.com/wppoland/abono)
+* **Bug reports and feature requests**: [github.com/wppoland/abono/issues](https://github.com/wppoland/abono/issues)
 
 
 = What it does =
@@ -70,9 +70,9 @@ Abono Pro adds:
 
 The free edition is not a trial and its features stay available without a time limit.
 
-* **Abono Pro** - [plogins.com/plogins-subscribe-pro/](https://plogins.com/plogins-subscribe-pro/)
-* **Compare editions and pricing** - [plogins.com/plogins-subscribe-pro/pricing/](https://plogins.com/plogins-subscribe-pro/pricing/)
-* **PRO documentation** - [plogins.com/plogins-subscribe-pro/docs/](https://plogins.com/plogins-subscribe-pro/docs/)
+* **Abono Pro** - [plogins.com/abono-pro/](https://plogins.com/abono-pro/)
+* **Compare editions and pricing** - [plogins.com/abono-pro/pricing/](https://plogins.com/abono-pro/pricing/)
+* **PRO documentation** - [plogins.com/abono-pro/docs/](https://plogins.com/abono-pro/docs/)
 
 == Installation ==
 
@@ -122,6 +122,9 @@ Abono connects to no external services. The opt-in checkbox, the consent records
 Abono is fully translatable and ships the `abono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.5 =
+* Links point at the new plogins.com address and the renamed GitHub repository.
 
 = 1.1.4 =
 * Security (low): the Subscribers screens now need the Manage WooCommerce permission, the same one the Export already asked for. Before, any Editor could open the Subscribers list under the WooCommerce menu and read every subscriber's email address.

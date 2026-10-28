@@ -23,8 +23,8 @@ msgstr "Abono - zapis do newslettera dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: abono.php
-msgid "https://plogins.com/plogins-subscribe/"
-msgstr "https://plogins.com/plogins-subscribe/"
+msgid "https://plogins.com/abono/"
+msgstr "https://plogins.com/abono/"
 
 #. Description of the plugin
 #: abono.php

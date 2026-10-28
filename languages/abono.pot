@@ -21,7 +21,7 @@ msgstr ""
 
 #. Plugin URI of the plugin
 #: abono.php
-msgid "https://plogins.com/plogins-subscribe/"
+msgid "https://plogins.com/abono/"
 msgstr ""
 
 #. Description of the plugin
