@@ -113,7 +113,9 @@ final class SubscribePrivacyService implements HasHooks
     {
         $query = new WP_Query([
             'post_type'      => Subscriber::POST_TYPE,
-            'post_status'    => 'any',
+            // 'any' leaves out the trash, and a trashed subscriber still holds
+            // the email until the trash is emptied.
+            'post_status'    => ['any', 'trash'],
             'posts_per_page' => self::PAGE_SIZE,
             'paged'          => $page,
             'fields'         => 'ids',
