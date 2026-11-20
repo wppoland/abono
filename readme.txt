@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -123,6 +123,9 @@ Abono connects to no external services. The opt-in checkbox, the consent records
 Abono is fully translatable and ships the `abono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.7 =
+* Fixed: the newsletter checkbox at checkout sits beside its text again on themes such as Storefront, where WooCommerce styles stacked it above the label.
 
 = 1.1.6 =
 * Fixed: deleting the plugin on a multisite network now removes its settings from every site, not only the main one.
