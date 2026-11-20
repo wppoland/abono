@@ -178,3 +178,21 @@
         animation: none;
     }
 }
+
+/* WooCommerce core sets `.woocommerce form .form-row label { display: block }`
+   and `.input-checkbox { display: inline }`, which outrank the classes above and
+   stack the box above its text on themes like Storefront. Match their weight. */
+.woocommerce form .form-row.subscribe-optin .subscribe-optin__label {
+    display: flex;
+    align-items: center;
+}
+
+.woocommerce form .form-row.subscribe-optin .subscribe-optin__input {
+    display: grid;
+    flex: 0 0 var(--subscribe-box);
+    width: var(--subscribe-box);
+    min-width: var(--subscribe-box);
+    height: var(--subscribe-box);
+    margin: 0;
+    padding: 0;
+}
