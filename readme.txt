@@ -110,8 +110,9 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 == Screenshots ==
 
-1. The newsletter opt-in checkbox on the WooCommerce checkout.
-2. The Subscribers list with the Export to CSV button.
+1. Newsletter opt-in checkbox at checkout.
+2. Settings under WooCommerce > Subscribe: placement, consent wording and default state.
+3. The opt-in on a phone.
 
 == External Services ==
 
