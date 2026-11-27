@@ -186,7 +186,7 @@ final class Export implements HasHooks
     }
 
     /**
-     * Every subscriber ID, newest first. IDs are eight bytes a row; the
+     * Every opted-in subscriber ID, newest first. IDs are eight bytes a row; the
      * subscriber records behind them are not, which is why only the IDs are
      * read in one go.
      *
@@ -201,6 +201,10 @@ final class Export implements HasHooks
                 'posts_per_page' => -1,
                 'fields'         => 'ids',
                 'no_found_rows'  => true,
+                // Only people who opted in: a double opt-in record waits with
+                // consent 0 until its link is clicked and must not leave the shop.
+                'meta_key'       => Subscriber::META_CONSENT, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+                'meta_value'     => '1', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
                 'orderby'        => 'date',
                 'order'          => 'DESC',
             ],
