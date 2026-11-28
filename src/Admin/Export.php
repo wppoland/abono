@@ -59,7 +59,7 @@ final class Export implements HasHooks
         ?>
         <div class="notice notice-info subscribe-export-notice">
             <p>
-                <?php esc_html_e('Export every subscriber (email, consent, source and date) to a CSV file.', 'abono'); ?>
+                <?php esc_html_e('Export every subscriber who opted in (email, consent, source and date) to a CSV file. Subscribers still waiting to confirm are left out.', 'abono'); ?>
                 <a class="button button-primary" href="<?php echo esc_url($url); ?>">
                     <?php esc_html_e('Export to CSV', 'abono'); ?>
                 </a>

@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.10
+Stable tag: 1.1.11
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -123,6 +123,10 @@ Abono connects to no external services. The opt-in checkbox, the consent records
 Abono is fully translatable and ships the `abono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.11 =
+* Changed: an opt-in for an email that is already stored fires the new `subscribe/subscriber_exists` action instead of being dropped silently. Abono Pro 1.0.22 uses it to send a fresh confirmation link to someone who never confirmed.
+* Fix: the Subscribers screen no longer says the CSV export holds every subscriber. It holds those who opted in.
 
 = 1.1.10 =
 * Changed: the CSV export lists only people who opted in. A subscriber still waiting to confirm a double opt-in email (Abono Pro) is left out until they confirm.

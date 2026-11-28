@@ -108,10 +108,18 @@ final class Subscriber implements HasHooks
      */
     public function exists(string $email): bool
     {
+        return $this->find($email) > 0;
+    }
+
+    /**
+     * The subscriber post ID stored for an email, or 0 when there is none.
+     */
+    public function find(string $email): int
+    {
         $email = sanitize_email($email);
 
         if ('' === $email) {
-            return false;
+            return 0;
         }
 
         $found = get_posts(
@@ -132,7 +140,7 @@ final class Subscriber implements HasHooks
             ],
         );
 
-        return [] !== $found;
+        return isset($found[0]) ? (int) $found[0] : 0;
     }
 
     /**
@@ -148,7 +156,20 @@ final class Subscriber implements HasHooks
             return 0;
         }
 
-        if ($this->exists($email)) {
+        $existing = $this->find($email);
+        if ($existing > 0) {
+            /**
+             * Fires when an opt-in arrives for an email that is already stored.
+             *
+             * Nothing is written. Abono Pro hooks this to send a fresh
+             * confirmation link to a subscriber who never confirmed.
+             *
+             * @param int    $existing The stored subscriber post ID.
+             * @param string $email    The subscriber's sanitised email address.
+             * @param string $source   The opt-in source key (e.g. "checkout").
+             */
+            do_action('subscribe/subscriber_exists', $existing, $email, '' !== $source ? $source : self::SOURCE_CHECKOUT);
+
             return 0;
         }
 

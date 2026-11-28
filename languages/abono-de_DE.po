@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe - Newsletter Opt-In for WooCommerce 0.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/abono\n"
-"POT-Creation-Date: 2026-11-25T14:32:02+00:00\n"
+"POT-Creation-Date: 2026-11-28T09:19:16+00:00\n"
 "PO-Revision-Date: 2026-06-18T15:53:02+00:00\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -50,10 +50,9 @@ msgstr "Abono setzt ein aktives WooCommerce voraus."
 
 #: src/Admin/Export.php:62
 msgid ""
-"Export every subscriber (email, consent, source and date) to a CSV file."
+"Export every subscriber who opted in (email, consent, source and date) to a "
+"CSV file. Subscribers still waiting to confirm are left out."
 msgstr ""
-"Exportiere jeden Abonnenten (E-Mail, Einwilligung, Quelle und Datum) in eine "
-"CSV-Datei."
 
 #: src/Admin/Export.php:64
 msgid "Export to CSV"
@@ -67,21 +66,21 @@ msgstr "Es ist dir nicht gestattet, Abonnenten zu exportieren."
 msgid "Security check failed. Please try again."
 msgstr "Sicherheitsüberprüfung fehlgeschlagen. Bitte versuche es erneut."
 
-#: src/Admin/Export.php:91 src/PostType/Subscriber.php:235
-#: src/PostType/Subscriber.php:306
+#: src/Admin/Export.php:91 src/PostType/Subscriber.php:256
+#: src/PostType/Subscriber.php:327
 msgid "Email"
 msgstr "E-Mail"
 
-#: src/Admin/Export.php:92 src/PostType/Subscriber.php:316
+#: src/Admin/Export.php:92 src/PostType/Subscriber.php:337
 msgid "Consent"
 msgstr "Zustimmung"
 
-#: src/Admin/Export.php:93 src/PostType/Subscriber.php:240
-#: src/PostType/Subscriber.php:326
+#: src/Admin/Export.php:93 src/PostType/Subscriber.php:261
+#: src/PostType/Subscriber.php:347
 msgid "Source"
 msgstr "Quelle"
 
-#: src/Admin/Export.php:94 src/PostType/Subscriber.php:330
+#: src/Admin/Export.php:94 src/PostType/Subscriber.php:351
 msgid "Subscribed at"
 msgstr "Abonniert am"
 
@@ -286,23 +285,23 @@ msgstr "Keine Abonnenten gefunden."
 msgid "No subscribers in Trash."
 msgstr "Keine Abonnenten im Papierkorb."
 
-#: src/PostType/Subscriber.php:241 src/Service/Checkout.php:97
+#: src/PostType/Subscriber.php:262 src/Service/Checkout.php:97
 msgid "Subscribed"
 msgstr "Abonniert"
 
-#: src/PostType/Subscriber.php:288
+#: src/PostType/Subscriber.php:309
 msgid "Subscriber details"
 msgstr "Abonnentendetails"
 
-#: src/PostType/Subscriber.php:320
+#: src/PostType/Subscriber.php:341
 msgid "Explicit opt-in recorded"
 msgstr "Explizites Opt-in aufgezeichnet"
 
-#: src/PostType/Subscriber.php:321
+#: src/PostType/Subscriber.php:342
 msgid "No consent recorded"
 msgstr "Keine Einwilligung erfasst"
 
-#: src/PostType/Subscriber.php:388
+#: src/PostType/Subscriber.php:409
 msgid "Checkout"
 msgstr "Checkout"
 
@@ -327,6 +326,12 @@ msgstr "Opt-in-Quelle"
 #: src/Service/SubscribePrivacyService.php:74
 msgid "Consented At"
 msgstr "Eingewilligt am"
+
+#~ msgid ""
+#~ "Export every subscriber (email, consent, source and date) to a CSV file."
+#~ msgstr ""
+#~ "Exportiere jeden Abonnenten (E-Mail, Einwilligung, Quelle und Datum) in "
+#~ "eine CSV-Datei."
 
 #~ msgid "Wkrótce"
 #~ msgstr "Demnächst"
