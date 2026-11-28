@@ -149,11 +149,8 @@ final class Checkout implements HasHooks
             return;
         }
 
-        // Idempotency: skip if already subscribed.
-        if ($this->subscribers->exists($email)) {
-            return;
-        }
-
+        // create() stores no duplicate: an email already on the list only fires
+        // subscribe/subscriber_exists.
         $this->subscribers->create($email, Subscriber::SOURCE_CHECKOUT);
     }
 
