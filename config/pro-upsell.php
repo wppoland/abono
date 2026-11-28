@@ -25,8 +25,8 @@ return [
             'pl' => ['title' => 'Automatyczny e-mail powitalny', 'desc' => 'Automatyczna wysyłka e-maila powitalnego do nowych subskrybentów (wdrożone).'],
         ],
         [
-            'en' => ['title' => 'Double opt-in confirmation', 'desc' => 'Send a verification link and record subscribers only after they confirm (shipped).'],
-            'pl' => ['title' => 'Weryfikacja double opt-in', 'desc' => 'Wysyłka linku potwierdzającego i aktywacja subskrypcji dopiero po kliknięciu (wdrożone).'],
+            'en' => ['title' => 'Double opt-in confirmation', 'desc' => 'Send a verification link; a new subscriber stays pending until they click it, and only then gets the welcome email, provider sync and a place in the CSV export (shipped).'],
+            'pl' => ['title' => 'Weryfikacja double opt-in', 'desc' => 'Wysyła link potwierdzający. Do kliknięcia subskrybent ma status oczekującego: nie dostaje e-maila powitalnego, nie trafia do synchronizacji ani do eksportu CSV (wdrożone).'],
         ],
         [
             'en' => ['title' => 'Custom fields and tags', 'desc' => 'Capture extra checkout fields and tag subscribers by source (shipped).'],
